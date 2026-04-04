@@ -1,0 +1,34 @@
+version: '3.9'
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+      target: development
+    volumes:
+      - ./server/src:/app/src
+      - uploads:/app/uploads
+    environment:
+      NODE_ENV: development
+      CORS_ORIGINS: http://localhost:5177
+      WEBAUTHN_RP_ID: localhost
+      WEBAUTHN_ORIGIN: http://localhost:5177
+    command: npx tsx watch src/index.ts
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+      target: development
+    volumes:
+      - ./client/src:/app/src
+      - ./client/public:/app/public
+      - ./client/index.html:/app/index.html
+    ports:
+      - "5177:5173"
+    command: npx vite --host 0.0.0.0
+
+  nginx:
+    ports:
+      - "8082:80"

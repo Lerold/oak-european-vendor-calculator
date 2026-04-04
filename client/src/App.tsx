@@ -1,0 +1,37 @@
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import AdminLayout from './components/admin/AdminLayout';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import Login from './pages/admin/Login';
+import Setup from './pages/admin/Setup';
+import Dashboard from './pages/admin/Dashboard';
+import Countries from './pages/admin/Countries';
+import Rates from './pages/admin/Rates';
+import Users from './pages/admin/Users';
+import Settings from './pages/admin/Settings';
+
+export default function App() {
+  return (
+    <Routes>
+      {/* Public routes */}
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+
+      {/* Admin auth (no sidebar) */}
+      <Route path="/admin/login" element={<Login />} />
+      <Route path="/admin/setup" element={<Setup />} />
+
+      {/* Admin panel (with sidebar) */}
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="countries" element={<Countries />} />
+        <Route path="rates" element={<Rates />} />
+        <Route path="users" element={<Users />} />
+        <Route path="settings" element={<Settings />} />
+      </Route>
+    </Routes>
+  );
+}

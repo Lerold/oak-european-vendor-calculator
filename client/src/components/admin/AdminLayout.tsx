@@ -1,0 +1,57 @@
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { LayoutDashboard, Globe, Percent, Users, Settings, LogOut } from 'lucide-react';
+import api from '../../services/api';
+
+const navItems = [
+  { to: '/admin', icon: LayoutDashboard, label: 'Dashboard', end: true },
+  { to: '/admin/countries', icon: Globe, label: 'Countries' },
+  { to: '/admin/rates', icon: Percent, label: 'Rates' },
+  { to: '/admin/users', icon: Users, label: 'Users' },
+  { to: '/admin/settings', icon: Settings, label: 'Settings' },
+];
+
+export default function AdminLayout() {
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await api.post('/auth/logout');
+    } catch {
+      // ignore
+    }
+    navigate('/admin/login');
+  };
+
+  return (
+    <div className="admin-layout">
+      <aside className="admin-sidebar">
+        <div className="admin-sidebar-header">
+          <img src="/logo.png" alt="Oaklease" className="admin-logo" />
+          <span className="admin-title">Admin</span>
+        </div>
+        <nav className="admin-nav">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.end}
+              className={({ isActive }) =>
+                `admin-nav-link ${isActive ? 'active' : ''}`
+              }
+            >
+              <item.icon size={18} />
+              <span>{item.label}</span>
+            </NavLink>
+          ))}
+        </nav>
+        <button onClick={handleLogout} className="admin-nav-link admin-logout">
+          <LogOut size={18} />
+          <span>Logout</span>
+        </button>
+      </aside>
+      <div className="admin-main">
+        <Outlet />
+      </div>
+    </div>
+  );
+}
