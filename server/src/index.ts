@@ -17,8 +17,25 @@ import usersRoutes from './routes/admin/users';
 const app = express();
 const PORT = parseInt(process.env.PORT || '3000', 10);
 
-// Security headers
-app.use(helmet());
+// Trust first proxy (Nginx) so rate limiting uses real client IP
+app.set('trust proxy', 1);
+
+// Security headers with strict CSP
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'"],
+      fontSrc: ["'self'"],
+      imgSrc: ["'self'", "data:"],
+      connectSrc: ["'self'"],
+      frameAncestors: ["'none'"],
+      formAction: ["'self'"],
+      baseUri: ["'self'"],
+    },
+  },
+}));
 
 // CORS
 const corsOrigins = process.env.CORS_ORIGINS

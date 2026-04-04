@@ -2,9 +2,11 @@ import { Router, Response } from 'express';
 import { z } from 'zod';
 import { query } from '../../config/database';
 import { AuthRequest, requireAuth } from '../../middleware/auth';
+import { validateUuidParam } from '../../middleware/validate';
 
 const router = Router();
 router.use(requireAuth as any);
+router.param('id', validateUuidParam('id'));
 
 const rateSchema = z.object({
   country_id: z.string().uuid(),
