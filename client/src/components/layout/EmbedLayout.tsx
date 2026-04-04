@@ -25,7 +25,7 @@ export default function EmbedLayout() {
       <div className="embed-footer">
         Powered by{' '}
         <a href="https://oaklease.co.uk" target="_blank" rel="noopener noreferrer">
-          Oaklease
+          Oaklease Ltd
         </a>
       </div>
     </div>

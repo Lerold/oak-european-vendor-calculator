@@ -30,7 +30,7 @@ const ALLOWED_MIMES = ['image/png', 'image/jpeg', 'image/webp'];
 
 const upload = multer({
   storage,
-  limits: { fileSize: 2 * 1024 * 1024 }, // 2MB
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB
   fileFilter: (_req, file, cb) => {
     const ext = path.extname(file.originalname).toLowerCase();
     if (ALLOWED_EXTENSIONS.includes(ext) && ALLOWED_MIMES.includes(file.mimetype)) {
@@ -152,8 +152,20 @@ router.put('/:id', async (req: AuthRequest, res: Response) => {
   }
 });
 
-// Upload vendor logo
-router.post('/:id/logo', upload.single('logo'), async (req: AuthRequest, res: Response) => {
+// Upload vendor logo (with multer error handling)
+router.post('/:id/logo', (req, res, next) => {
+  upload.single('logo')(req, res, (err) => {
+    if (err) {
+      if (err.code === 'LIMIT_FILE_SIZE') {
+        res.status(400).json({ error: 'File too large (max 5MB)' });
+        return;
+      }
+      res.status(400).json({ error: err.message || 'Upload failed' });
+      return;
+    }
+    next();
+  });
+}, async (req: AuthRequest, res: Response) => {
   if (!req.file) {
     res.status(400).json({ error: 'No file uploaded' });
     return;
