@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Küldés",
+    "cancel": "Mégse",
+    "loading": "Betöltés...",
+    "error": "Hiba történt",
+    "back": "Vissza"
+  },
+  "nav": {
+    "calculator": "Kalkulátor",
+    "faq": "GYIK",
+    "language": "Nyelv"
+  },
+  "hero": {
+    "title": "Európai eszközlízing-kalkulátor",
+    "subtitle": "Becsülje meg az eszközlízing költségeit egész Európában. Kapjon azonnal tájékoztató jellegű havi és negyedéves fizetési összegeket."
+  },
+  "calculator": {
+    "country": "Ország",
+    "selectCountry": "Válasszon országot",
+    "equipmentValue": "Eszközérték",
+    "equipmentType": "Eszköztípus",
+    "selectType": "Válasszon típust",
+    "leaseTerm": "Lízingidőszak",
+    "selectTerm": "Válasszon időszakot",
+    "months": "hónap",
+    "year": "év",
+    "years": "év",
+    "advancePayments": "Előleg (hónap)",
+    "default": "Alapértelmezett",
+    "calculate": "Számítás",
+    "calculating": "Számítás folyamatban...",
+    "loadingCountries": "Országok betöltése..."
+  },
+  "results": {
+    "title": "Becsült lízingköltségek",
+    "monthlyPayment": "Havi fizetés",
+    "quarterlyPayment": "Negyedéves fizetés",
+    "exclVat": "áfa nélkül",
+    "inclVat": "áfával",
+    "breakdown": "Részletezés",
+    "equipmentValue": "Eszközérték",
+    "deposit": "Kaució / Előleg",
+    "amountFinanced": "Finanszírozott összeg",
+    "monthlyVat": "Havi áfa",
+    "totalExclVat": "Teljes lízingköltség (áfa nélkül)",
+    "totalInclVat": "Teljes lízingköltség (áfával)",
+    "disclaimer": "Ezek az összegek kizárólag tájékoztató jellegű becslések. A tényleges lízingfeltételek a hitelminősítéstől, az eszköztípustól és egyéb tényezőktől függően eltérhetnek. Kérjen hivatalos árajánlatot a pontos árakért."
+  },
+  "enquiry": {
+    "title": "Árajánlat kérése",
+    "subtitle": "Érdeklik ezek az összegek? Küldje el adatait, és hivatalos árajánlatot készítünk Önnek.",
+    "name": "Az Ön neve",
+    "company": "Cégnév",
+    "email": "E-mail",
+    "phone": "Telefon (opcionális)",
+    "message": "Üzenet (opcionális)",
+    "consent": "Hozzájárulok, hogy az Oaklease Ltd személyes adataimat feldolgozza ezen megkeresés megválaszolása céljából.",
+    "privacyPolicy": "Adatvédelmi szabályzat",
+    "submit": "Árajánlat kérése",
+    "submitting": "Küldés folyamatban...",
+    "successTitle": "Köszönjük!",
+    "successMessage": "Árajánlat-kérelmét megkaptuk. Csapatunk 1-2 munkanapon belül felveszi Önnel a kapcsolatot.",
+    "consentRequired": "A megkeresés elküldéséhez hozzá kell járulnia az adatkezeléshez."
+  },
+  "faq": {
+    "title": "Gyakran ismételt kérdések",
+    "intro": "Minden, amit tudni kell az eszközlízingről Európában."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — Európai eszközlízing-megoldások",
+    "privacy": "Adatvédelmi szabályzat",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "A keresett oldal nem létezik.",
+    "back": "Vissza a kalkulátorhoz"
+  },
+  "embed": {
+    "poweredBy": "Üzemelteti"
+  }
+}

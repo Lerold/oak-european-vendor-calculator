@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Skicka",
+    "cancel": "Avbryt",
+    "loading": "Laddar...",
+    "error": "Ett fel har inträffat",
+    "back": "Tillbaka"
+  },
+  "nav": {
+    "calculator": "Kalkylator",
+    "faq": "FAQ",
+    "language": "Språk"
+  },
+  "hero": {
+    "title": "Europeisk leasingkalkylator för utrustning",
+    "subtitle": "Beräkna leasingkostnader för utrustning i hela Europa. Få indikativa månads- och kvartalsbetalningar direkt."
+  },
+  "calculator": {
+    "country": "Land",
+    "selectCountry": "Välj ett land",
+    "equipmentValue": "Utrustningsvärde",
+    "equipmentType": "Utrustningstyp",
+    "selectType": "Välj typ",
+    "leaseTerm": "Leasingperiod",
+    "selectTerm": "Välj period",
+    "months": "månader",
+    "year": "år",
+    "years": "år",
+    "advancePayments": "Förskottsbetalningar (månader)",
+    "default": "Standard",
+    "calculate": "Beräkna",
+    "calculating": "Beräknar...",
+    "loadingCountries": "Laddar länder..."
+  },
+  "results": {
+    "title": "Beräknade leasingkostnader",
+    "monthlyPayment": "Månadsbetalning",
+    "quarterlyPayment": "Kvartalsbetalning",
+    "exclVat": "exkl. moms",
+    "inclVat": "inkl. moms",
+    "breakdown": "Specifikation",
+    "equipmentValue": "Utrustningsvärde",
+    "deposit": "Deposition / Förskott",
+    "amountFinanced": "Finansierat belopp",
+    "monthlyVat": "Månatlig moms",
+    "totalExclVat": "Total leasingkostnad (exkl. moms)",
+    "totalInclVat": "Total leasingkostnad (inkl. moms)",
+    "disclaimer": "Dessa siffror är enbart indikativa uppskattningar. Faktiska leasingvillkor kan variera beroende på kreditbedömning, utrustningstyp och andra faktorer. Begär en formell offert för exakt prissättning."
+  },
+  "enquiry": {
+    "title": "Begär en offert",
+    "subtitle": "Intresserad av dessa siffror? Skicka dina uppgifter så ger vi dig en formell offert.",
+    "name": "Ditt namn",
+    "company": "Företagsnamn",
+    "email": "E-post",
+    "phone": "Telefon (valfritt)",
+    "message": "Meddelande (valfritt)",
+    "consent": "Jag samtycker till att Oaklease Ltd behandlar mina personuppgifter för att besvara denna förfrågan.",
+    "privacyPolicy": "Integritetspolicy",
+    "submit": "Begär en offert",
+    "submitting": "Skickar...",
+    "successTitle": "Tack!",
+    "successMessage": "Din offertförfrågan har skickats. Vårt team återkommer inom 1–2 arbetsdagar.",
+    "consentRequired": "Du måste samtycka till databehandling för att skicka en förfrågan."
+  },
+  "faq": {
+    "title": "Vanliga frågor",
+    "intro": "Allt du behöver veta om leasing av utrustning i Europa."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — Europeiska leasinglösningar för utrustning",
+    "privacy": "Integritetspolicy",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Sidan du letar efter finns inte.",
+    "back": "Tillbaka till kalkylatorn"
+  },
+  "embed": {
+    "poweredBy": "Drivs av"
+  }
+}

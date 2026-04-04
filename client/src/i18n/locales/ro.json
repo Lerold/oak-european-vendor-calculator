@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Trimite",
+    "cancel": "Anulează",
+    "loading": "Se încarcă...",
+    "error": "A apărut o eroare",
+    "back": "Înapoi"
+  },
+  "nav": {
+    "calculator": "Calculator",
+    "faq": "Întrebări frecvente",
+    "language": "Limbă"
+  },
+  "hero": {
+    "title": "Calculator european de leasing pentru echipamente",
+    "subtitle": "Estimați costurile de leasing pentru echipamente din toată Europa. Obțineți instantaneu plăți lunare și trimestriale orientative."
+  },
+  "calculator": {
+    "country": "Țara",
+    "selectCountry": "Selectați o țară",
+    "equipmentValue": "Valoarea echipamentului",
+    "equipmentType": "Tipul echipamentului",
+    "selectType": "Selectați tipul",
+    "leaseTerm": "Durata leasingului",
+    "selectTerm": "Selectați durata",
+    "months": "luni",
+    "year": "an",
+    "years": "ani",
+    "advancePayments": "Plăți în avans (luni)",
+    "default": "Implicit",
+    "calculate": "Calculează",
+    "calculating": "Se calculează...",
+    "loadingCountries": "Se încarcă țările..."
+  },
+  "results": {
+    "title": "Costuri estimate de leasing",
+    "monthlyPayment": "Plata lunară",
+    "quarterlyPayment": "Plata trimestrială",
+    "exclVat": "fără TVA",
+    "inclVat": "cu TVA",
+    "breakdown": "Detaliere",
+    "equipmentValue": "Valoarea echipamentului",
+    "deposit": "Avans / Garanție",
+    "amountFinanced": "Suma finanțată",
+    "monthlyVat": "TVA lunar",
+    "totalExclVat": "Costul total al leasingului (fără TVA)",
+    "totalInclVat": "Costul total al leasingului (cu TVA)",
+    "disclaimer": "Aceste cifre sunt doar estimări orientative. Condițiile reale de leasing pot varia în funcție de evaluarea creditului, tipul echipamentului și alți factori. Solicitați o ofertă oficială pentru prețuri exacte."
+  },
+  "enquiry": {
+    "title": "Solicitați o ofertă",
+    "subtitle": "Vă interesează aceste cifre? Trimiteți-ne datele dumneavoastră și vă vom furniza o ofertă oficială.",
+    "name": "Numele dumneavoastră",
+    "company": "Numele companiei",
+    "email": "E-mail",
+    "phone": "Telefon (opțional)",
+    "message": "Mesaj (opțional)",
+    "consent": "Consent ca Oaklease Ltd să prelucreze datele mele personale pentru a răspunde la această solicitare.",
+    "privacyPolicy": "Politica de confidențialitate",
+    "submit": "Solicitați o ofertă",
+    "submitting": "Se trimite...",
+    "successTitle": "Vă mulțumim!",
+    "successMessage": "Solicitarea dumneavoastră de ofertă a fost trimisă. Echipa noastră vă va contacta în 1-2 zile lucrătoare.",
+    "consentRequired": "Trebuie să consimțiți la prelucrarea datelor pentru a trimite o solicitare."
+  },
+  "faq": {
+    "title": "Întrebări frecvente",
+    "intro": "Tot ce trebuie să știți despre leasingul de echipamente în Europa."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — Soluții europene de leasing pentru echipamente",
+    "privacy": "Politica de confidențialitate",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Pagina pe care o căutați nu există.",
+    "back": "Înapoi la calculator"
+  },
+  "embed": {
+    "poweredBy": "Oferit de"
+  }
+}

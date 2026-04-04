@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { Outlet } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function EmbedLayout() {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
 
   // Post height to parent window for auto-resize
@@ -23,7 +25,7 @@ export default function EmbedLayout() {
     <div className="embed-layout" ref={ref}>
       <Outlet />
       <div className="embed-footer">
-        Powered by{' '}
+        {t('embed.poweredBy')}{' '}
         <a href="https://oaklease.co.uk" target="_blank" rel="noopener noreferrer">
           Oaklease Ltd
         </a>

@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Pošalji",
+    "cancel": "Odustani",
+    "loading": "Učitavanje...",
+    "error": "Došlo je do pogreške",
+    "back": "Natrag"
+  },
+  "nav": {
+    "calculator": "Kalkulator",
+    "faq": "Česta pitanja",
+    "language": "Jezik"
+  },
+  "hero": {
+    "title": "Europski kalkulator leasinga opreme",
+    "subtitle": "Procijenite troškove leasinga opreme diljem Europe. Odmah dobijte okvirne mjesečne i tromjesečne rate."
+  },
+  "calculator": {
+    "country": "Država",
+    "selectCountry": "Odaberite državu",
+    "equipmentValue": "Vrijednost opreme",
+    "equipmentType": "Vrsta opreme",
+    "selectType": "Odaberite vrstu",
+    "leaseTerm": "Razdoblje leasinga",
+    "selectTerm": "Odaberite razdoblje",
+    "months": "mjeseci",
+    "year": "godina",
+    "years": "godine",
+    "advancePayments": "Predujmovi (mjeseci)",
+    "default": "Zadano",
+    "calculate": "Izračunaj",
+    "calculating": "Izračunavanje...",
+    "loadingCountries": "Učitavanje država..."
+  },
+  "results": {
+    "title": "Procijenjeni troškovi leasinga",
+    "monthlyPayment": "Mjesečna rata",
+    "quarterlyPayment": "Tromjesečna rata",
+    "exclVat": "bez PDV-a",
+    "inclVat": "s PDV-om",
+    "breakdown": "Specifikacija",
+    "equipmentValue": "Vrijednost opreme",
+    "deposit": "Polog / Predujam",
+    "amountFinanced": "Financirani iznos",
+    "monthlyVat": "Mjesečni PDV",
+    "totalExclVat": "Ukupni troškovi leasinga (bez PDV-a)",
+    "totalInclVat": "Ukupni troškovi leasinga (s PDV-om)",
+    "disclaimer": "Ovi iznosi su isključivo okvirne procjene. Stvarni uvjeti leasinga mogu se razlikovati ovisno o kreditnoj procjeni, vrsti opreme i drugim čimbenicima. Zatražite formalnu ponudu za točne cijene."
+  },
+  "enquiry": {
+    "title": "Zatražite ponudu",
+    "subtitle": "Zainteresirani za ove iznose? Pošaljite nam svoje podatke i dostavit ćemo vam formalnu ponudu.",
+    "name": "Vaše ime",
+    "company": "Naziv tvrtke",
+    "email": "E-pošta",
+    "phone": "Telefon (neobavezno)",
+    "message": "Poruka (neobavezno)",
+    "consent": "Pristajem da Oaklease Ltd obrađuje moje osobne podatke radi odgovora na ovaj upit.",
+    "privacyPolicy": "Pravila o privatnosti",
+    "submit": "Zatražite ponudu",
+    "submitting": "Slanje...",
+    "successTitle": "Hvala!",
+    "successMessage": "Vaš zahtjev za ponudu je poslan. Naš tim će vas kontaktirati unutar 1-2 radna dana.",
+    "consentRequired": "Morate pristati na obradu podataka da biste poslali upit."
+  },
+  "faq": {
+    "title": "Česta pitanja",
+    "intro": "Sve što trebate znati o leasingu opreme u Europi."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — Europska rješenja za leasing opreme",
+    "privacy": "Pravila o privatnosti",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Stranica koju tražite ne postoji.",
+    "back": "Natrag na kalkulator"
+  },
+  "embed": {
+    "poweredBy": "Pokreće"
+  }
+}

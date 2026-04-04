@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "loading": "Cargando...",
+    "error": "Se ha producido un error",
+    "back": "Volver"
+  },
+  "nav": {
+    "calculator": "Calculadora",
+    "faq": "FAQ",
+    "language": "Idioma"
+  },
+  "hero": {
+    "title": "Calculadora europea de leasing de equipos",
+    "subtitle": "Estime los costes de leasing de equipos en toda Europa. Obtenga al instante pagos mensuales y trimestrales indicativos."
+  },
+  "calculator": {
+    "country": "País",
+    "selectCountry": "Seleccionar un país",
+    "equipmentValue": "Valor del equipo",
+    "equipmentType": "Tipo de equipo",
+    "selectType": "Seleccionar tipo",
+    "leaseTerm": "Plazo de leasing",
+    "selectTerm": "Seleccionar plazo",
+    "months": "meses",
+    "year": "año",
+    "years": "años",
+    "advancePayments": "Pagos anticipados (meses)",
+    "default": "Por defecto",
+    "calculate": "Calcular",
+    "calculating": "Calculando...",
+    "loadingCountries": "Cargando países..."
+  },
+  "results": {
+    "title": "Costes de leasing estimados",
+    "monthlyPayment": "Pago mensual",
+    "quarterlyPayment": "Pago trimestral",
+    "exclVat": "sin IVA",
+    "inclVat": "con IVA",
+    "breakdown": "Desglose",
+    "equipmentValue": "Valor del equipo",
+    "deposit": "Depósito / Anticipo",
+    "amountFinanced": "Importe financiado",
+    "monthlyVat": "IVA mensual",
+    "totalExclVat": "Coste total del leasing (sin IVA)",
+    "totalInclVat": "Coste total del leasing (con IVA)",
+    "disclaimer": "Estas cifras son únicamente estimaciones indicativas. Las condiciones reales de leasing pueden variar en función de la evaluación crediticia, el tipo de equipo y otros factores. Solicite un presupuesto formal para obtener precios exactos."
+  },
+  "enquiry": {
+    "title": "Solicitar presupuesto",
+    "subtitle": "¿Le interesan estas cifras? Envíenos sus datos y le proporcionaremos un presupuesto formal.",
+    "name": "Su nombre",
+    "company": "Nombre de la empresa",
+    "email": "Correo electrónico",
+    "phone": "Teléfono (opcional)",
+    "message": "Mensaje (opcional)",
+    "consent": "Autorizo a Oaklease Ltd a procesar mis datos personales para responder a esta consulta.",
+    "privacyPolicy": "Política de privacidad",
+    "submit": "Solicitar presupuesto",
+    "submitting": "Enviando...",
+    "successTitle": "¡Gracias!",
+    "successMessage": "Su solicitud de presupuesto ha sido enviada. Nuestro equipo se pondrá en contacto con usted en 1-2 días laborables.",
+    "consentRequired": "Debe aceptar el tratamiento de datos para enviar una consulta."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "intro": "Todo lo que necesita saber sobre el leasing de equipos en Europa."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — Soluciones europeas de leasing de equipos",
+    "privacy": "Política de privacidad",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "La página que busca no existe.",
+    "back": "Volver a la calculadora"
+  },
+  "embed": {
+    "poweredBy": "Desarrollado por"
+  }
+}

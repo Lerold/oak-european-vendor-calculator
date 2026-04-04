@@ -51,12 +51,15 @@ interface Props {
   vendorSlug?: string;
   equipmentTypes?: string[];
   preloadedCountries?: Country[];
+  defaultCountry?: string;
+  ctaText?: string;
+  accentColor?: string;
 }
 
-export default function CalculatorForm({ vendorSlug, equipmentTypes, preloadedCountries }: Props) {
+export default function CalculatorForm({ vendorSlug, equipmentTypes, preloadedCountries, defaultCountry, ctaText, accentColor }: Props) {
   const [countries, setCountries] = useState<Country[]>(preloadedCountries || []);
   const [loadingCountries, setLoadingCountries] = useState(!preloadedCountries);
-  const [selectedCode, setSelectedCode] = useState('');
+  const [selectedCode, setSelectedCode] = useState(defaultCountry || '');
   const [amount, setAmount] = useState('');
   const [termMonths, setTermMonths] = useState('');
   const [depositMonths, setDepositMonths] = useState('');
@@ -238,6 +241,7 @@ export default function CalculatorForm({ vendorSlug, equipmentTypes, preloadedCo
             equipmentValue={result.input.equipmentValue}
             termMonths={result.input.termMonths}
             monthlyPayment={result.result.monthlyPaymentExclVat}
+            ctaText={ctaText}
           />
         </>
       )}

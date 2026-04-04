@@ -1,14 +1,14 @@
+import { useTranslation } from 'react-i18next';
 import CalculatorForm from '../components/calculator/CalculatorForm';
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <div className="home-page">
       <section className="hero">
-        <h1>European Equipment Leasing Calculator</h1>
-        <p className="hero-subtitle">
-          Estimate leasing costs for equipment across Europe. Get indicative
-          monthly and quarterly payments instantly.
-        </p>
+        <h1>{t('hero.title')}</h1>
+        <p className="hero-subtitle">{t('hero.subtitle')}</p>
       </section>
 
       <section className="calculator-section">

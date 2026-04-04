@@ -9,6 +9,7 @@ interface Props {
   equipmentValue?: number;
   termMonths?: number;
   monthlyPayment?: number;
+  ctaText?: string;
 }
 
 export default function QuoteRequestForm({
@@ -18,6 +19,7 @@ export default function QuoteRequestForm({
   equipmentValue,
   termMonths,
   monthlyPayment,
+  ctaText,
 }: Props) {
   const [contactName, setContactName] = useState('');
   const [companyName, setCompanyName] = useState('');
@@ -82,7 +84,7 @@ export default function QuoteRequestForm({
 
   return (
     <div className="quote-form card">
-      <h3>Request a Quote</h3>
+      <h3>{ctaText || 'Request a Quote'}</h3>
       <p className="quote-subtitle">
         Interested in these figures? Submit your details and we'll provide a
         formal quotation.
@@ -173,7 +175,7 @@ export default function QuoteRequestForm({
           disabled={submitting}
         >
           <Send size={16} />
-          {submitting ? 'Submitting...' : 'Request a Quote'}
+          {submitting ? 'Submitting...' : (ctaText || 'Request a Quote')}
         </button>
       </form>
     </div>

@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Absenden",
+    "cancel": "Abbrechen",
+    "loading": "Wird geladen...",
+    "error": "Ein Fehler ist aufgetreten",
+    "back": "Zurück"
+  },
+  "nav": {
+    "calculator": "Rechner",
+    "faq": "FAQ",
+    "language": "Sprache"
+  },
+  "hero": {
+    "title": "Europäischer Leasing-Rechner für Ausrüstung",
+    "subtitle": "Schätzen Sie die Leasingkosten für Ausrüstung in ganz Europa. Erhalten Sie sofort indikative monatliche und vierteljährliche Zahlungen."
+  },
+  "calculator": {
+    "country": "Land",
+    "selectCountry": "Land auswählen",
+    "equipmentValue": "Ausrüstungswert",
+    "equipmentType": "Ausrüstungsart",
+    "selectType": "Art auswählen",
+    "leaseTerm": "Leasinglaufzeit",
+    "selectTerm": "Laufzeit auswählen",
+    "months": "Monate",
+    "year": "Jahr",
+    "years": "Jahre",
+    "advancePayments": "Vorauszahlungen (Monate)",
+    "default": "Standard",
+    "calculate": "Berechnen",
+    "calculating": "Wird berechnet...",
+    "loadingCountries": "Länder werden geladen..."
+  },
+  "results": {
+    "title": "Geschätzte Leasingkosten",
+    "monthlyPayment": "Monatliche Zahlung",
+    "quarterlyPayment": "Vierteljährliche Zahlung",
+    "exclVat": "zzgl. MwSt.",
+    "inclVat": "inkl. MwSt.",
+    "breakdown": "Aufschlüsselung",
+    "equipmentValue": "Ausrüstungswert",
+    "deposit": "Anzahlung / Vorauszahlung",
+    "amountFinanced": "Finanzierungsbetrag",
+    "monthlyVat": "Monatliche MwSt.",
+    "totalExclVat": "Gesamte Leasingkosten (zzgl. MwSt.)",
+    "totalInclVat": "Gesamte Leasingkosten (inkl. MwSt.)",
+    "disclaimer": "Diese Zahlen sind lediglich indikative Schätzungen. Die tatsächlichen Leasingbedingungen können je nach Bonitätsprüfung, Ausrüstungsart und anderen Faktoren abweichen. Fordern Sie ein formelles Angebot für eine genaue Preisgestaltung an."
+  },
+  "enquiry": {
+    "title": "Angebot anfordern",
+    "subtitle": "Interessiert an diesen Zahlen? Senden Sie uns Ihre Daten und wir erstellen Ihnen ein formelles Angebot.",
+    "name": "Ihr Name",
+    "company": "Firmenname",
+    "email": "E-Mail",
+    "phone": "Telefon (optional)",
+    "message": "Nachricht (optional)",
+    "consent": "Ich stimme zu, dass Oaklease Ltd meine personenbezogenen Daten verarbeitet, um auf diese Anfrage zu antworten.",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "submit": "Angebot anfordern",
+    "submitting": "Wird gesendet...",
+    "successTitle": "Vielen Dank!",
+    "successMessage": "Ihre Angebotsanfrage wurde übermittelt. Unser Team wird sich innerhalb von 1–2 Werktagen bei Ihnen melden.",
+    "consentRequired": "Sie müssen der Datenverarbeitung zustimmen, um eine Anfrage zu senden."
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "intro": "Alles, was Sie über Ausrüstungsleasing in Europa wissen müssen."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — Europäische Leasinglösungen für Ausrüstung",
+    "privacy": "Datenschutzrichtlinie",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Die gesuchte Seite existiert nicht.",
+    "back": "Zurück zum Rechner"
+  },
+  "embed": {
+    "poweredBy": "Bereitgestellt von"
+  }
+}

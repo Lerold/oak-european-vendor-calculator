@@ -12,6 +12,10 @@ interface Vendor {
   oaklease_email: string;
   equipment_types: string[] | null;
   allowed_countries: string[] | null;
+  accent_color: string | null;
+  cta_text: string | null;
+  banner_url: string | null;
+  default_country: string | null;
   is_active: boolean;
 }
 
@@ -30,6 +34,9 @@ const emptyVendor = {
   oaklease_email: 'enquiries@oaklease.co.uk',
   equipment_types_str: '',
   allowed_countries: [] as string[],
+  accent_color: '#4a8c3f',
+  cta_text: '',
+  default_country: '',
   is_active: true,
 };
 
@@ -77,6 +84,9 @@ export default function Vendors() {
       oaklease_email: v.oaklease_email,
       equipment_types_str: (v.equipment_types || []).join(', '),
       allowed_countries: v.allowed_countries || [],
+      accent_color: v.accent_color || '#4a8c3f',
+      cta_text: v.cta_text || '',
+      default_country: v.default_country || '',
       is_active: v.is_active,
     });
     setShowForm(true);
@@ -101,6 +111,9 @@ export default function Vendors() {
       oaklease_email: form.oaklease_email,
       equipment_types: equipmentTypes.length > 0 ? equipmentTypes : undefined,
       allowed_countries: form.allowed_countries.length > 0 ? form.allowed_countries : undefined,
+      accent_color: form.accent_color || undefined,
+      cta_text: form.cta_text || undefined,
+      default_country: form.default_country || '',
       is_active: form.is_active,
     };
 
@@ -211,6 +224,26 @@ export default function Vendors() {
               <div className="form-group">
                 <label>Welcome Text</label>
                 <textarea value={form.welcome_text} onChange={(e) => setForm({ ...form, welcome_text: e.target.value })} rows={2} placeholder="Welcome message shown on vendor calculator..." />
+              </div>
+
+              <div className="form-row">
+                <div className="form-group" style={{ maxWidth: 120 }}>
+                  <label>Accent Color</label>
+                  <input type="color" value={form.accent_color} onChange={(e) => setForm({ ...form, accent_color: e.target.value })} />
+                </div>
+                <div className="form-group">
+                  <label>CTA Button Text</label>
+                  <input value={form.cta_text} onChange={(e) => setForm({ ...form, cta_text: e.target.value })} placeholder="Request a Quote" />
+                </div>
+                <div className="form-group">
+                  <label>Default Country (code)</label>
+                  <select value={form.default_country} onChange={(e) => setForm({ ...form, default_country: e.target.value })}>
+                    <option value="">None</option>
+                    {countries.map((c) => (
+                      <option key={c.id} value={c.code}>{c.flag_emoji} {c.name} ({c.code})</option>
+                    ))}
+                  </select>
+                </div>
               </div>
 
               <div className="form-group">
