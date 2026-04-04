@@ -961,6 +961,32 @@ label {
   color: var(--color-success);
 }
 
+/* === Embed Layout (iframe) === */
+.embed-layout {
+  padding: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: var(--font-family);
+}
+
+.embed-content {
+  width: 100%;
+}
+
+.embed-footer {
+  text-align: center;
+  padding: 1rem 0 0.5rem;
+  font-size: 0.75rem;
+  color: #8a9bb5;
+  border-top: 1px solid var(--color-border);
+  margin-top: 1.5rem;
+}
+
+.embed-footer a {
+  color: var(--color-green);
+  font-weight: 600;
+}
+
 /* === Status Select (inline in table) === */
 .status-select {
   width: auto;

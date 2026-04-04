@@ -1,8 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import EmbedLayout from './components/layout/EmbedLayout';
 import AdminLayout from './components/admin/AdminLayout';
 import Home from './pages/Home';
 import VendorCalculator from './pages/VendorCalculator';
+import EmbedCalculator from './pages/EmbedCalculator';
 import NotFound from './pages/NotFound';
 import Login from './pages/admin/Login';
 import Setup from './pages/admin/Setup';
@@ -17,6 +19,12 @@ import Settings from './pages/admin/Settings';
 export default function App() {
   return (
     <Routes>
+      {/* Embed routes (no header/footer, iframe-friendly) */}
+      <Route path="/embed" element={<EmbedLayout />}>
+        <Route index element={<EmbedCalculator />} />
+        <Route path=":slug" element={<EmbedCalculator />} />
+      </Route>
+
       {/* Public routes */}
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
