@@ -47,7 +47,7 @@ export default function Users() {
         displayName: displayName.trim() || username.trim(),
       });
 
-      const attResp = await startRegistration({ optionsJSON: regData.options });
+      const attResp = await startRegistration(regData.options);
 
       await api.post('/auth/register', {
         challengeId: regData.challengeId,

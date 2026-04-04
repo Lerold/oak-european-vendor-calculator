@@ -28,7 +28,7 @@ export default function Setup() {
       });
 
       // Step 2: Create passkey via browser WebAuthn API
-      const attResp = await startRegistration({ optionsJSON: regData.options });
+      const attResp = await startRegistration(regData.options);
 
       // Step 3: Verify with server
       const { data: verifyData } = await api.post('/auth/register', {

@@ -9,7 +9,7 @@ import {
 import type {
   RegistrationResponseJSON,
   AuthenticationResponseJSON,
-} from '@simplewebauthn/server/script/deps';
+} from '@simplewebauthn/types';
 import { query } from '../config/database';
 import { createSession, destroySession, getSessionCookieOptions, AuthRequest, requireAuth } from '../middleware/auth';
 
@@ -25,7 +25,8 @@ const challengeStore = new Map<string, { challenge: string; userId?: string; use
 // Check if setup is needed (no admin users exist)
 router.get('/setup-status', async (_req: Request, res: Response) => {
   try {
-    const result = await query('SELECT COUNT(*) as count FROM admin_users');
+    // Only count users with completed passkey registration
+    const result = await query('SELECT COUNT(*) as count FROM admin_users WHERE credential_id IS NOT NULL');
     const needsSetup = parseInt(result.rows[0].count, 10) === 0;
     res.json({ needsSetup });
   } catch {
@@ -45,7 +46,7 @@ router.post('/register-options', async (req: Request, res: Response) => {
     }
 
     // Check if this is first-time setup or an authenticated admin adding a user
-    const userCount = await query('SELECT COUNT(*) as count FROM admin_users');
+    const userCount = await query('SELECT COUNT(*) as count FROM admin_users WHERE credential_id IS NOT NULL');
     const isFirstSetup = parseInt(userCount.rows[0].count, 10) === 0;
 
     if (!isFirstSetup) {
@@ -68,14 +69,23 @@ router.post('/register-options', async (req: Request, res: Response) => {
       }
     }
 
-    // Check for existing username
-    const existing = await query('SELECT id FROM admin_users WHERE username = $1', [username.trim()]);
+    // Check for existing username (ignore orphaned records without credentials)
+    const existing = await query(
+      'SELECT id FROM admin_users WHERE username = $1 AND credential_id IS NOT NULL',
+      [username.trim()]
+    );
     if (existing.rows.length > 0) {
       res.status(409).json({ error: 'Username already exists' });
       return;
     }
 
-    // Create the user record first (without credentials)
+    // Clean up any orphaned record from a previous failed registration
+    await query(
+      'DELETE FROM admin_users WHERE username = $1 AND credential_id IS NULL',
+      [username.trim()]
+    );
+
+    // Create the user record (without credentials — will be set after passkey verification)
     const userResult = await query(
       'INSERT INTO admin_users (username, display_name) VALUES ($1, $2) RETURNING id',
       [username.trim(), (displayName || username).trim()]
@@ -85,7 +95,7 @@ router.post('/register-options', async (req: Request, res: Response) => {
     const options = await generateRegistrationOptions({
       rpName,
       rpID,
-      userID: new TextEncoder().encode(userId),
+      userID: userId,
       userName: username.trim(),
       userDisplayName: (displayName || username).trim(),
       attestationType: 'none',
@@ -133,7 +143,7 @@ router.post('/register', async (req: Request, res: Response) => {
       return;
     }
 
-    const { credential } = verification.registrationInfo;
+    const { credentialID, credentialPublicKey, counter } = verification.registrationInfo;
 
     // Update user with credential info
     await query(
@@ -141,9 +151,9 @@ router.post('/register', async (req: Request, res: Response) => {
        SET credential_id = $1, public_key = $2, counter = $3
        WHERE id = $4`,
       [
-        Buffer.from(credential.id).toString('base64url'),
-        Buffer.from(credential.publicKey).toString('base64url'),
-        credential.counter,
+        Buffer.from(credentialID).toString('base64url'),
+        Buffer.from(credentialPublicKey).toString('base64url'),
+        counter,
         stored.userId,
       ]
     );
@@ -227,9 +237,9 @@ router.post('/login', async (req: Request, res: Response) => {
       expectedChallenge: stored.challenge,
       expectedOrigin: origin,
       expectedRPID: rpID,
-      credential: {
-        id: user.credential_id,
-        publicKey: Buffer.from(user.public_key, 'base64url'),
+      authenticator: {
+        credentialID: Buffer.from(user.credential_id, 'base64url'),
+        credentialPublicKey: Buffer.from(user.public_key, 'base64url'),
         counter: user.counter,
       },
     });

@@ -16,15 +16,17 @@ export default function Dashboard() {
   useEffect(() => {
     async function loadStats() {
       try {
-        const [countriesRes, usersRes] = await Promise.all([
+        const [countriesRes, vendorsRes, usersRes, enquiriesRes] = await Promise.all([
           api.get('/admin/countries'),
+          api.get('/admin/vendors'),
           api.get('/admin/users'),
+          api.get('/admin/enquiries?limit=1'),
         ]);
         setStats({
           countries: countriesRes.data.countries?.length || 0,
-          vendors: 0, // vendors not yet built
+          vendors: vendorsRes.data.vendors?.length || 0,
           users: usersRes.data.users?.length || 0,
-          enquiries: 0, // enquiries not yet built
+          enquiries: enquiriesRes.data.total || 0,
         });
       } catch {
         // ignore — will show 0s

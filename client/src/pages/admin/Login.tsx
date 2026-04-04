@@ -30,7 +30,7 @@ export default function Login() {
       const { data: authData } = await api.post('/auth/login-options');
 
       // Step 2: Authenticate via browser WebAuthn API
-      const authResp = await startAuthentication({ optionsJSON: authData.options });
+      const authResp = await startAuthentication(authData.options);
 
       // Step 3: Verify with server
       const { data: verifyData } = await api.post('/auth/login', {
