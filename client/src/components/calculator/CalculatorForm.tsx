@@ -3,6 +3,7 @@ import { Calculator } from 'lucide-react';
 import api from '../../services/api';
 import CountrySelector from './CountrySelector';
 import ResultsCard from './ResultsCard';
+import QuoteRequestForm from '../enquiry/QuoteRequestForm';
 
 interface Country {
   code: string;
@@ -46,26 +47,37 @@ interface CalcResponse {
   };
 }
 
-export default function CalculatorForm() {
-  const [countries, setCountries] = useState<Country[]>([]);
-  const [loadingCountries, setLoadingCountries] = useState(true);
+interface Props {
+  vendorSlug?: string;
+  equipmentTypes?: string[];
+  preloadedCountries?: Country[];
+}
+
+export default function CalculatorForm({ vendorSlug, equipmentTypes, preloadedCountries }: Props) {
+  const [countries, setCountries] = useState<Country[]>(preloadedCountries || []);
+  const [loadingCountries, setLoadingCountries] = useState(!preloadedCountries);
   const [selectedCode, setSelectedCode] = useState('');
   const [amount, setAmount] = useState('');
   const [termMonths, setTermMonths] = useState('');
   const [depositMonths, setDepositMonths] = useState('');
+  const [equipmentType, setEquipmentType] = useState('');
   const [calculating, setCalculating] = useState(false);
   const [result, setResult] = useState<CalcResponse | null>(null);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    api.get('/countries').then(({ data }) => {
-      setCountries(data.countries);
+    if (preloadedCountries) return;
+
+    // For vendor mode, fetch from vendor endpoint; otherwise public countries
+    const url = vendorSlug ? `/vendor/${vendorSlug}` : '/countries';
+    api.get(url).then(({ data }) => {
+      setCountries(vendorSlug ? data.countries : data.countries);
       setLoadingCountries(false);
     }).catch(() => {
       setError('Failed to load countries');
       setLoadingCountries(false);
     });
-  }, []);
+  }, [vendorSlug, preloadedCountries]);
 
   const selectedCountry = countries.find((c) => c.code === selectedCode);
   const availableTerms = selectedCountry?.available_terms || [];
@@ -123,6 +135,22 @@ export default function CalculatorForm() {
 
         {selectedCountry && (
           <>
+            {equipmentTypes && equipmentTypes.length > 1 && (
+              <div className="form-group">
+                <label htmlFor="equipmentType">Equipment Type</label>
+                <select
+                  id="equipmentType"
+                  value={equipmentType}
+                  onChange={(e) => setEquipmentType(e.target.value)}
+                >
+                  <option value="">Select type</option>
+                  {equipmentTypes.map((t) => (
+                    <option key={t} value={t}>{t}</option>
+                  ))}
+                </select>
+              </div>
+            )}
+
             <div className="form-group">
               <label htmlFor="amount">
                 Equipment Value ({selectedCountry.currency_code})
@@ -197,11 +225,21 @@ export default function CalculatorForm() {
       </form>
 
       {result && (
-        <ResultsCard
-          result={result.result}
-          country={result.country}
-          equipmentValue={result.input.equipmentValue}
-        />
+        <>
+          <ResultsCard
+            result={result.result}
+            country={result.country}
+            equipmentValue={result.input.equipmentValue}
+          />
+          <QuoteRequestForm
+            vendorSlug={vendorSlug}
+            countryCode={result.country.code}
+            equipmentType={equipmentType || undefined}
+            equipmentValue={result.input.equipmentValue}
+            termMonths={result.input.termMonths}
+            monthlyPayment={result.result.monthlyPaymentExclVat}
+          />
+        </>
       )}
     </div>
   );

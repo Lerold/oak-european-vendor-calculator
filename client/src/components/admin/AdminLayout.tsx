@@ -1,11 +1,13 @@
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Globe, Percent, Users, Settings, LogOut } from 'lucide-react';
+import { LayoutDashboard, Globe, Percent, Building2, MessageSquare, Users, Settings, LogOut } from 'lucide-react';
 import api from '../../services/api';
 
 const navItems = [
   { to: '/admin', icon: LayoutDashboard, label: 'Dashboard', end: true },
   { to: '/admin/countries', icon: Globe, label: 'Countries' },
   { to: '/admin/rates', icon: Percent, label: 'Rates' },
+  { to: '/admin/vendors', icon: Building2, label: 'Vendors' },
+  { to: '/admin/enquiries', icon: MessageSquare, label: 'Enquiries' },
   { to: '/admin/users', icon: Users, label: 'Users' },
   { to: '/admin/settings', icon: Settings, label: 'Settings' },
 ];

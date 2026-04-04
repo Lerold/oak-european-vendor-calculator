@@ -9,10 +9,14 @@ import { startSessionCleanup } from './middleware/auth';
 import authRoutes from './routes/auth';
 import publicCountriesRoutes from './routes/countries';
 import calculatorRoutes from './routes/calculator';
+import vendorRoutes from './routes/vendor';
+import enquiryRoutes from './routes/enquiry';
 import countriesRoutes from './routes/admin/countries';
 import ratesRoutes from './routes/admin/rates';
 import settingsRoutes from './routes/admin/settings';
 import usersRoutes from './routes/admin/users';
+import vendorsAdminRoutes from './routes/admin/vendors';
+import enquiriesAdminRoutes from './routes/admin/enquiries';
 
 const app = express();
 const PORT = parseInt(process.env.PORT || '3000', 10);
@@ -93,6 +97,8 @@ app.get('/api/health', async (_req, res) => {
 // Public routes with rate limiting
 app.use('/api/countries', apiLimiter, publicCountriesRoutes);
 app.use('/api/calculate', apiLimiter, calculatorRoutes);
+app.use('/api/vendor', apiLimiter, vendorRoutes);
+app.use('/api/enquiry', enquiryLimiter, enquiryRoutes);
 
 // Auth routes
 app.use('/api/auth', authLimiter, authRoutes);
@@ -102,10 +108,8 @@ app.use('/api/admin/countries', countriesRoutes);
 app.use('/api/admin/rates', ratesRoutes);
 app.use('/api/admin/settings', settingsRoutes);
 app.use('/api/admin/users', usersRoutes);
-
-// Future: enquiry route
-// app.use('/api/enquiry', enquiryLimiter, enquiryRoutes);
-void enquiryLimiter;
+app.use('/api/admin/vendors', vendorsAdminRoutes);
+app.use('/api/admin/enquiries', enquiriesAdminRoutes);
 
 // Global error handler — never leak stack traces or DB details
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
