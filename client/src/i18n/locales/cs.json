@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Odeslat",
+    "cancel": "Zrušit",
+    "loading": "Načítání...",
+    "error": "Došlo k chybě",
+    "back": "Zpět"
+  },
+  "nav": {
+    "calculator": "Kalkulačka",
+    "faq": "FAQ",
+    "language": "Jazyk"
+  },
+  "hero": {
+    "title": "Evropská kalkulačka leasingu vybavení",
+    "subtitle": "Odhadněte náklady na leasing vybavení po celé Evropě. Získejte okamžitě orientační měsíční a čtvrtletní splátky."
+  },
+  "calculator": {
+    "country": "Země",
+    "selectCountry": "Vyberte zemi",
+    "equipmentValue": "Hodnota vybavení",
+    "equipmentType": "Typ vybavení",
+    "selectType": "Vyberte typ",
+    "leaseTerm": "Doba leasingu",
+    "selectTerm": "Vyberte dobu",
+    "months": "měsíců",
+    "year": "rok",
+    "years": "roky",
+    "advancePayments": "Zálohy (měsíce)",
+    "default": "Výchozí",
+    "calculate": "Vypočítat",
+    "calculating": "Probíhá výpočet...",
+    "loadingCountries": "Načítání zemí..."
+  },
+  "results": {
+    "title": "Odhadované náklady na leasing",
+    "monthlyPayment": "Měsíční splátka",
+    "quarterlyPayment": "Čtvrtletní splátka",
+    "exclVat": "bez DPH",
+    "inclVat": "vč. DPH",
+    "breakdown": "Rozpis",
+    "equipmentValue": "Hodnota vybavení",
+    "deposit": "Záloha / Akontace",
+    "amountFinanced": "Financovaná částka",
+    "monthlyVat": "Měsíční DPH",
+    "totalExclVat": "Celkové náklady na leasing (bez DPH)",
+    "totalInclVat": "Celkové náklady na leasing (vč. DPH)",
+    "disclaimer": "Tyto částky jsou pouze orientační odhady. Skutečné podmínky leasingu se mohou lišit v závislosti na posouzení bonity, typu vybavení a dalších faktorech. Vyžádejte si formální nabídku pro přesnou kalkulaci."
+  },
+  "enquiry": {
+    "title": "Vyžádat si nabídku",
+    "subtitle": "Zaujaly vás tyto částky? Zašlete nám své údaje a my vám poskytneme formální nabídku.",
+    "name": "Vaše jméno",
+    "company": "Název společnosti",
+    "email": "E-mail",
+    "phone": "Telefon (nepovinné)",
+    "message": "Zpráva (nepovinné)",
+    "consent": "Souhlasím se zpracováním mých osobních údajů společností Oaklease Ltd za účelem odpovědi na tento dotaz.",
+    "privacyPolicy": "Zásady ochrany osobních údajů",
+    "submit": "Vyžádat si nabídku",
+    "submitting": "Odesílání...",
+    "successTitle": "Děkujeme!",
+    "successMessage": "Vaše žádost o nabídku byla odeslána. Náš tým vás bude kontaktovat do 1–2 pracovních dnů.",
+    "consentRequired": "Pro odeslání dotazu musíte souhlasit se zpracováním údajů."
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "intro": "Vše, co potřebujete vědět o leasingu vybavení v Evropě."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — Evropská řešení leasingu vybavení",
+    "privacy": "Zásady ochrany osobních údajů",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Stránka, kterou hledáte, neexistuje.",
+    "back": "Zpět na kalkulačku"
+  },
+  "embed": {
+    "poweredBy": "Provozuje"
+  }
+}

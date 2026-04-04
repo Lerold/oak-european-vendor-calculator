@@ -11,6 +11,7 @@ import publicCountriesRoutes from './routes/countries';
 import calculatorRoutes from './routes/calculator';
 import vendorRoutes from './routes/vendor';
 import enquiryRoutes from './routes/enquiry';
+import faqRoutes from './routes/faq';
 import countriesRoutes from './routes/admin/countries';
 import ratesRoutes from './routes/admin/rates';
 import settingsRoutes from './routes/admin/settings';
@@ -98,6 +99,7 @@ app.get('/api/health', async (_req, res) => {
 app.use('/api/countries', apiLimiter, publicCountriesRoutes);
 app.use('/api/calculate', apiLimiter, calculatorRoutes);
 app.use('/api/vendor', apiLimiter, vendorRoutes);
+app.use('/api/faq', apiLimiter, faqRoutes);
 app.use('/api/enquiry', enquiryLimiter, enquiryRoutes);
 
 // Auth routes

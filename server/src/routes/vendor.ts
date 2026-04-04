@@ -7,7 +7,8 @@ const router = Router();
 router.get('/:slug', async (req: Request, res: Response) => {
   try {
     const vendorResult = await query(
-      `SELECT id, name, slug, logo_url, welcome_text, equipment_types, allowed_countries
+      `SELECT id, name, slug, logo_url, welcome_text, equipment_types, allowed_countries,
+              accent_color, cta_text, banner_url, default_country
        FROM vendors
        WHERE slug = $1 AND is_active = true`,
       [req.params.slug.toLowerCase()]
@@ -45,6 +46,10 @@ router.get('/:slug', async (req: Request, res: Response) => {
         logoUrl: vendor.logo_url,
         welcomeText: vendor.welcome_text,
         equipmentTypes: vendor.equipment_types,
+        accentColor: vendor.accent_color,
+        ctaText: vendor.cta_text,
+        bannerUrl: vendor.banner_url,
+        defaultCountry: vendor.default_country,
       },
       countries: countriesResult.rows,
     });

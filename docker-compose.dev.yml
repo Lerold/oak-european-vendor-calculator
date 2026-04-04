@@ -8,6 +8,7 @@ services:
       target: development
     volumes:
       - ./server/src:/app/src
+      - ./server/migrations:/app/migrations
       - uploads:/app/uploads
     environment:
       NODE_ENV: development

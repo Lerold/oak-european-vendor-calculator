@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Pošlji",
+    "cancel": "Prekliči",
+    "loading": "Nalaganje...",
+    "error": "Prišlo je do napake",
+    "back": "Nazaj"
+  },
+  "nav": {
+    "calculator": "Kalkulator",
+    "faq": "Pogosta vprašanja",
+    "language": "Jezik"
+  },
+  "hero": {
+    "title": "Evropski kalkulator lizinga opreme",
+    "subtitle": "Ocenite stroške lizinga opreme po vsej Evropi. Takoj pridobite okvirne mesečne in četrtletne obroke."
+  },
+  "calculator": {
+    "country": "Država",
+    "selectCountry": "Izberite državo",
+    "equipmentValue": "Vrednost opreme",
+    "equipmentType": "Vrsta opreme",
+    "selectType": "Izberite vrsto",
+    "leaseTerm": "Trajanje lizinga",
+    "selectTerm": "Izberite trajanje",
+    "months": "mesecev",
+    "year": "leto",
+    "years": "leta",
+    "advancePayments": "Predplačila (meseci)",
+    "default": "Privzeto",
+    "calculate": "Izračunaj",
+    "calculating": "Izračunavanje...",
+    "loadingCountries": "Nalaganje držav..."
+  },
+  "results": {
+    "title": "Ocenjeni stroški lizinga",
+    "monthlyPayment": "Mesečni obrok",
+    "quarterlyPayment": "Četrtletni obrok",
+    "exclVat": "brez DDV",
+    "inclVat": "z DDV",
+    "breakdown": "Specifikacija",
+    "equipmentValue": "Vrednost opreme",
+    "deposit": "Varščina / Predplačilo",
+    "amountFinanced": "Financiran znesek",
+    "monthlyVat": "Mesečni DDV",
+    "totalExclVat": "Skupni stroški lizinga (brez DDV)",
+    "totalInclVat": "Skupni stroški lizinga (z DDV)",
+    "disclaimer": "Ti zneski so zgolj okvirne ocene. Dejanski pogoji lizinga se lahko razlikujejo glede na kreditno oceno, vrsto opreme in druge dejavnike. Za natančno ponudbo zaprosite uradno ponudbo."
+  },
+  "enquiry": {
+    "title": "Zaprosite ponudbo",
+    "subtitle": "Vas zanimajo ti zneski? Pošljite nam svoje podatke in pripravili vam bomo uradno ponudbo.",
+    "name": "Vaše ime",
+    "company": "Ime podjetja",
+    "email": "E-pošta",
+    "phone": "Telefon (neobvezno)",
+    "message": "Sporočilo (neobvezno)",
+    "consent": "Soglašam, da Oaklease Ltd obdeluje moje osebne podatke za odgovor na to povpraševanje.",
+    "privacyPolicy": "Politika zasebnosti",
+    "submit": "Zaprosite ponudbo",
+    "submitting": "Pošiljanje...",
+    "successTitle": "Hvala!",
+    "successMessage": "Vaša zahteva za ponudbo je bila poslana. Naša ekipa vas bo kontaktirala v 1–2 delovnih dneh.",
+    "consentRequired": "Za pošiljanje povpraševanja morate soglašati z obdelavo podatkov."
+  },
+  "faq": {
+    "title": "Pogosta vprašanja",
+    "intro": "Vse, kar morate vedeti o lizingu opreme v Evropi."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — Evropske rešitve za lizing opreme",
+    "privacy": "Politika zasebnosti",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Stran, ki jo iščete, ne obstaja.",
+    "back": "Nazaj na kalkulator"
+  },
+  "embed": {
+    "poweredBy": "Poganja"
+  }
+}

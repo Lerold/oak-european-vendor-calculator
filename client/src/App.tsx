@@ -5,6 +5,7 @@ import AdminLayout from './components/admin/AdminLayout';
 import Home from './pages/Home';
 import VendorCalculator from './pages/VendorCalculator';
 import EmbedCalculator from './pages/EmbedCalculator';
+import FAQ from './pages/FAQ';
 import NotFound from './pages/NotFound';
 import Login from './pages/admin/Login';
 import Setup from './pages/admin/Setup';
@@ -28,6 +29,7 @@ export default function App() {
       {/* Public routes */}
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/:slug" element={<VendorCalculator />} />
         <Route path="*" element={<NotFound />} />
       </Route>

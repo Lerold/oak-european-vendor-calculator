@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Wyślij",
+    "cancel": "Anuluj",
+    "loading": "Ładowanie...",
+    "error": "Wystąpił błąd",
+    "back": "Wstecz"
+  },
+  "nav": {
+    "calculator": "Kalkulator",
+    "faq": "FAQ",
+    "language": "Język"
+  },
+  "hero": {
+    "title": "Europejski kalkulator leasingu sprzętu",
+    "subtitle": "Oszacuj koszty leasingu sprzętu w całej Europie. Uzyskaj natychmiastowe orientacyjne raty miesięczne i kwartalne."
+  },
+  "calculator": {
+    "country": "Kraj",
+    "selectCountry": "Wybierz kraj",
+    "equipmentValue": "Wartość sprzętu",
+    "equipmentType": "Rodzaj sprzętu",
+    "selectType": "Wybierz rodzaj",
+    "leaseTerm": "Okres leasingu",
+    "selectTerm": "Wybierz okres",
+    "months": "miesięcy",
+    "year": "rok",
+    "years": "lata",
+    "advancePayments": "Płatności z góry (miesiące)",
+    "default": "Domyślnie",
+    "calculate": "Oblicz",
+    "calculating": "Obliczanie...",
+    "loadingCountries": "Ładowanie krajów..."
+  },
+  "results": {
+    "title": "Szacunkowe koszty leasingu",
+    "monthlyPayment": "Rata miesięczna",
+    "quarterlyPayment": "Rata kwartalna",
+    "exclVat": "netto",
+    "inclVat": "brutto",
+    "breakdown": "Szczegóły",
+    "equipmentValue": "Wartość sprzętu",
+    "deposit": "Kaucja / Wpłata wstępna",
+    "amountFinanced": "Kwota finansowania",
+    "monthlyVat": "Miesięczny VAT",
+    "totalExclVat": "Całkowity koszt leasingu (netto)",
+    "totalInclVat": "Całkowity koszt leasingu (brutto)",
+    "disclaimer": "Powyższe kwoty stanowią jedynie orientacyjne szacunki. Rzeczywiste warunki leasingu mogą się różnić w zależności od oceny zdolności kredytowej, rodzaju sprzętu i innych czynników. Poproś o formalną ofertę w celu uzyskania dokładnej wyceny."
+  },
+  "enquiry": {
+    "title": "Poproś o ofertę",
+    "subtitle": "Zainteresowany tymi kwotami? Prześlij swoje dane, a my przedstawimy formalną ofertę.",
+    "name": "Twoje imię i nazwisko",
+    "company": "Nazwa firmy",
+    "email": "E-mail",
+    "phone": "Telefon (opcjonalnie)",
+    "message": "Wiadomość (opcjonalnie)",
+    "consent": "Wyrażam zgodę na przetwarzanie moich danych osobowych przez Oaklease Ltd w celu udzielenia odpowiedzi na niniejsze zapytanie.",
+    "privacyPolicy": "Polityka prywatności",
+    "submit": "Poproś o ofertę",
+    "submitting": "Wysyłanie...",
+    "successTitle": "Dziękujemy!",
+    "successMessage": "Twoja prośba o ofertę została przesłana. Nasz zespół skontaktuje się z Tobą w ciągu 1–2 dni roboczych.",
+    "consentRequired": "Aby przesłać zapytanie, musisz wyrazić zgodę na przetwarzanie danych."
+  },
+  "faq": {
+    "title": "Często zadawane pytania",
+    "intro": "Wszystko, co musisz wiedzieć o leasingu sprzętu w Europie."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — Europejskie rozwiązania leasingu sprzętu",
+    "privacy": "Polityka prywatności",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Strona, której szukasz, nie istnieje.",
+    "back": "Wróć do kalkulatora"
+  },
+  "embed": {
+    "poweredBy": "Obsługiwane przez"
+  }
+}

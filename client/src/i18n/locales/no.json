@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Send",
+    "cancel": "Avbryt",
+    "loading": "Laster...",
+    "error": "Det oppstod en feil",
+    "back": "Tilbake"
+  },
+  "nav": {
+    "calculator": "Kalkulator",
+    "faq": "FAQ",
+    "language": "Språk"
+  },
+  "hero": {
+    "title": "Europeisk leasingkalkulator for utstyr",
+    "subtitle": "Beregn leasingkostnader for utstyr i hele Europa. Få veiledende månedlige og kvartalsvise betalinger umiddelbart."
+  },
+  "calculator": {
+    "country": "Land",
+    "selectCountry": "Velg et land",
+    "equipmentValue": "Utstyrsverdi",
+    "equipmentType": "Utstyrstype",
+    "selectType": "Velg type",
+    "leaseTerm": "Leasingperiode",
+    "selectTerm": "Velg periode",
+    "months": "måneder",
+    "year": "år",
+    "years": "år",
+    "advancePayments": "Forskuddsbetalinger (måneder)",
+    "default": "Standard",
+    "calculate": "Beregn",
+    "calculating": "Beregner...",
+    "loadingCountries": "Laster land..."
+  },
+  "results": {
+    "title": "Estimerte leasingkostnader",
+    "monthlyPayment": "Månedlig betaling",
+    "quarterlyPayment": "Kvartalsvis betaling",
+    "exclVat": "ekskl. mva.",
+    "inclVat": "inkl. mva.",
+    "breakdown": "Spesifikasjon",
+    "equipmentValue": "Utstyrsverdi",
+    "deposit": "Depositum / Forskuddsbetaling",
+    "amountFinanced": "Finansiert beløp",
+    "monthlyVat": "Månedlig mva.",
+    "totalExclVat": "Totale leasingkostnader (ekskl. mva.)",
+    "totalInclVat": "Totale leasingkostnader (inkl. mva.)",
+    "disclaimer": "Disse tallene er kun veiledende estimater. De faktiske leasingvilkårene kan variere basert på kredittvurdering, utstyrstype og andre faktorer. Be om et formelt tilbud for nøyaktig prising."
+  },
+  "enquiry": {
+    "title": "Be om et tilbud",
+    "subtitle": "Interessert i disse tallene? Send inn opplysningene dine, så gir vi deg et formelt tilbud.",
+    "name": "Ditt navn",
+    "company": "Firmanavn",
+    "email": "E-post",
+    "phone": "Telefon (valgfritt)",
+    "message": "Melding (valgfritt)",
+    "consent": "Jeg samtykker til at Oaklease Ltd behandler mine personopplysninger for å besvare denne henvendelsen.",
+    "privacyPolicy": "Personvernerklæring",
+    "submit": "Be om et tilbud",
+    "submitting": "Sender...",
+    "successTitle": "Takk!",
+    "successMessage": "Din tilbudsforespørsel er sendt. Teamet vårt tar kontakt innen 1–2 virkedager.",
+    "consentRequired": "Du må samtykke til databehandling for å sende en henvendelse."
+  },
+  "faq": {
+    "title": "Ofte stilte spørsmål",
+    "intro": "Alt du trenger å vite om leasing av utstyr i Europa."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — Europeiske leasingløsninger for utstyr",
+    "privacy": "Personvernerklæring",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Siden du leter etter finnes ikke.",
+    "back": "Tilbake til kalkulatoren"
+  },
+  "embed": {
+    "poweredBy": "Levert av"
+  }
+}

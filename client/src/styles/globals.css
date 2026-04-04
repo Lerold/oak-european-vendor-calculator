@@ -169,6 +169,22 @@ img {
   color: var(--color-green);
 }
 
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--color-primary-text);
+}
+
+.language-switcher select {
+  width: auto;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+}
+
 /* === Footer === */
 .footer {
   background: var(--color-bg-section);
@@ -898,8 +914,20 @@ label {
   margin-bottom: 1.5rem;
 }
 
+.vendor-banner {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.vendor-header-content {
+  text-align: center;
+}
+
 .vendor-logo {
-  max-height: 60px;
+  max-height: 80px;
   width: auto;
   margin-bottom: 0.75rem;
 }
@@ -985,6 +1013,84 @@ label {
 .embed-footer a {
   color: var(--color-green);
   font-weight: 600;
+}
+
+/* === FAQ === */
+.faq-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-intro {
+  color: var(--color-primary-text);
+  margin-bottom: 2rem;
+}
+
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-bottom: none;
+  background: var(--color-bg);
+}
+
+.faq-item:first-child {
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  text-align: left;
+}
+
+.faq-question:hover {
+  background: var(--color-bg-section);
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  color: var(--color-primary-text);
+  transition: transform 0.2s;
+}
+
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 1.25rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-primary-text);
+}
+
+.faq-answer p {
+  margin-bottom: 0.75rem;
+}
+
+.faq-answer strong {
+  color: var(--color-heading);
 }
 
 /* === Status Select (inline in table) === */

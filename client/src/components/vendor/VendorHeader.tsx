@@ -1,19 +1,25 @@
 interface Props {
   name: string;
   logoUrl?: string | null;
+  bannerUrl?: string | null;
   welcomeText?: string | null;
 }
 
-export default function VendorHeader({ name, logoUrl, welcomeText }: Props) {
+export default function VendorHeader({ name, logoUrl, bannerUrl, welcomeText }: Props) {
   return (
     <div className="vendor-header">
-      {logoUrl && (
-        <img src={logoUrl} alt={name} className="vendor-logo" />
+      {bannerUrl && (
+        <img src={bannerUrl} alt="" className="vendor-banner" />
       )}
-      <h2 className="vendor-name">{name}</h2>
-      {welcomeText && (
-        <p className="vendor-welcome">{welcomeText}</p>
-      )}
+      <div className="vendor-header-content">
+        {logoUrl && (
+          <img src={logoUrl} alt={name} className="vendor-logo" />
+        )}
+        <h2 className="vendor-name">{name}</h2>
+        {welcomeText && (
+          <p className="vendor-welcome">{welcomeText}</p>
+        )}
+      </div>
     </div>
   );
 }

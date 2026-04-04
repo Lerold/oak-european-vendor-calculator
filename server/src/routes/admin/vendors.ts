@@ -49,6 +49,9 @@ const vendorSchema = z.object({
   oaklease_email: z.string().email().default('enquiries@oaklease.co.uk'),
   equipment_types: z.array(z.string()).optional(),
   allowed_countries: z.array(z.string().uuid()).optional(),
+  accent_color: z.string().regex(/^#[0-9a-fA-F]{6}$/).optional(),
+  cta_text: z.string().max(100).optional(),
+  default_country: z.string().min(2).max(3).optional().or(z.literal('')),
   is_active: z.boolean().default(true),
 });
 

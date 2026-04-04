@@ -10,6 +10,10 @@ interface VendorData {
   logoUrl: string | null;
   welcomeText: string | null;
   equipmentTypes: string[] | null;
+  accentColor: string | null;
+  ctaText: string | null;
+  bannerUrl: string | null;
+  defaultCountry: string | null;
 }
 
 export default function VendorCalculator() {
@@ -48,11 +52,17 @@ export default function VendorCalculator() {
     );
   }
 
+  // Apply vendor accent color as CSS custom property
+  const vendorStyle = vendor.accentColor
+    ? { '--color-green': vendor.accentColor, '--color-green-hover': vendor.accentColor } as React.CSSProperties
+    : undefined;
+
   return (
-    <div className="home-page">
+    <div className="home-page" style={vendorStyle}>
       <VendorHeader
         name={vendor.name}
         logoUrl={vendor.logoUrl}
+        bannerUrl={vendor.bannerUrl}
         welcomeText={vendor.welcomeText}
       />
 
@@ -60,6 +70,9 @@ export default function VendorCalculator() {
         <CalculatorForm
           vendorSlug={slug}
           equipmentTypes={vendor.equipmentTypes || undefined}
+          defaultCountry={vendor.defaultCountry || undefined}
+          ctaText={vendor.ctaText || undefined}
+          accentColor={vendor.accentColor || undefined}
         />
       </section>
     </div>
