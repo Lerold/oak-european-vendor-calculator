@@ -20,7 +20,9 @@ export async function query(text: string, params?: unknown[]) {
   const result = await pool.query(text, params);
   const duration = Date.now() - start;
   if (process.env.NODE_ENV === 'development') {
-    console.log('Query executed', { text: text.substring(0, 80), duration, rows: result.rowCount });
+    // Only log query type + table, never parameter values (may contain PII)
+    const queryType = text.trim().substring(0, 40).replace(/\s+/g, ' ');
+    console.log('Query executed', { query: queryType, duration, rows: result.rowCount });
   }
   return result;
 }
