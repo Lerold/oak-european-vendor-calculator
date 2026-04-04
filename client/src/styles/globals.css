@@ -130,7 +130,7 @@ img {
 .header-inner {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -144,7 +144,7 @@ img {
 }
 
 .header-logo-img {
-  height: 56px;
+  height: 150px;
   width: auto;
 }
 

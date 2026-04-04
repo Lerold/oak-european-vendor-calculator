@@ -25,6 +25,9 @@ services:
       - ./client/src:/app/src
       - ./client/public:/app/public
       - ./client/index.html:/app/index.html
+      - ./client/vite.config.ts:/app/vite.config.ts
+    environment:
+      VITE_ALLOWED_HOSTS: ${VITE_ALLOWED_HOSTS:-localhost}
     ports:
       - "5177:5173"
     command: npx vite --host 0.0.0.0

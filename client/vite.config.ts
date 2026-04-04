@@ -6,6 +6,9 @@ export default defineConfig({
   server: {
     port: 5173,
     host: '0.0.0.0',
+    allowedHosts: process.env.VITE_ALLOWED_HOSTS
+      ? process.env.VITE_ALLOWED_HOSTS.split(',').map((h) => h.trim())
+      : ['localhost'],
     proxy: {
       '/api': {
         target: 'http://server:3000',
