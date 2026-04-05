@@ -23,9 +23,8 @@ import Settings from './pages/admin/Settings';
 export default function App() {
   return (
     <Routes>
-      {/* Embed routes (no header/footer, iframe-friendly) */}
+      {/* Embed routes (vendor-only, no header/footer, iframe-friendly) */}
       <Route path="/embed" element={<EmbedLayout />}>
-        <Route index element={<EmbedCalculator />} />
         <Route path=":slug" element={<EmbedCalculator />} />
       </Route>
 
