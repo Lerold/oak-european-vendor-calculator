@@ -20,7 +20,8 @@ export default function EmbedCalculator() {
 
   useEffect(() => {
     if (!slug) {
-      // No slug = main Oaklease calculator embed
+      // No slug = not allowed (calculators are vendor-only)
+      setError('A vendor slug is required');
       setLoading(false);
       return;
     }
