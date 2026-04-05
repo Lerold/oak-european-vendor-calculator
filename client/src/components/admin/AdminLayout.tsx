@@ -1,5 +1,5 @@
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Globe, Percent, Building2, MessageSquare, Users, Settings, LogOut } from 'lucide-react';
+import { LayoutDashboard, Globe, Percent, Building2, MessageSquare, BarChart3, HelpCircle, Users, Settings, LogOut } from 'lucide-react';
 import api from '../../services/api';
 
 const navItems = [
@@ -8,6 +8,8 @@ const navItems = [
   { to: '/admin/rates', icon: Percent, label: 'Rates' },
   { to: '/admin/vendors', icon: Building2, label: 'Vendors' },
   { to: '/admin/enquiries', icon: MessageSquare, label: 'Enquiries' },
+  { to: '/admin/analytics', icon: BarChart3, label: 'Analytics' },
+  { to: '/admin/faq', icon: HelpCircle, label: 'FAQ' },
   { to: '/admin/users', icon: Users, label: 'Users' },
   { to: '/admin/settings', icon: Settings, label: 'Settings' },
 ];
@@ -50,6 +52,7 @@ export default function AdminLayout() {
           <LogOut size={18} />
           <span>Logout</span>
         </button>
+        <div className="admin-version">v1.0.0</div>
       </aside>
       <div className="admin-main">
         <Outlet />

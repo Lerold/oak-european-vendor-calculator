@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Plus, Pencil, Trash2, X, Upload } from 'lucide-react';
+import { Plus, Pencil, Trash2, X, Upload, Link, Code } from 'lucide-react';
 import api from '../../services/api';
 
 interface Vendor {
@@ -313,6 +313,8 @@ export default function Vendors() {
                   <td><span className={`status-badge ${v.is_active ? 'active' : 'inactive'}`}>{v.is_active ? 'Active' : 'Inactive'}</span></td>
                   <td>
                     <div className="table-actions">
+                      <button onClick={() => { navigator.clipboard.writeText(`${window.location.origin}/${v.slug}`); }} className="icon-btn" title="Copy URL"><Link size={16} /></button>
+                      <button onClick={() => { navigator.clipboard.writeText(`<iframe src="${window.location.origin}/embed/${v.slug}" style="width:100%;border:none;min-height:800px"></iframe>\n<script>window.addEventListener('message',e=>{if(e.data?.type==='oaklease-resize')document.querySelector('iframe').style.height=e.data.height+'px'});</script>`); }} className="icon-btn" title="Copy embed code"><Code size={16} /></button>
                       <button onClick={() => openEdit(v)} className="icon-btn" title="Edit"><Pencil size={16} /></button>
                       <button onClick={() => handleDelete(v)} className="icon-btn danger" title="Delete"><Trash2 size={16} /></button>
                     </div>

@@ -12,12 +12,15 @@ import calculatorRoutes from './routes/calculator';
 import vendorRoutes from './routes/vendor';
 import enquiryRoutes from './routes/enquiry';
 import faqRoutes from './routes/faq';
+import publicSettingsRoutes from './routes/settings-public';
 import countriesRoutes from './routes/admin/countries';
 import ratesRoutes from './routes/admin/rates';
 import settingsRoutes from './routes/admin/settings';
 import usersRoutes from './routes/admin/users';
 import vendorsAdminRoutes from './routes/admin/vendors';
 import enquiriesAdminRoutes from './routes/admin/enquiries';
+import analyticsAdminRoutes from './routes/admin/analytics';
+import invitesAdminRoutes from './routes/admin/invites';
 
 const app = express();
 const PORT = parseInt(process.env.PORT || '3000', 10);
@@ -30,11 +33,11 @@ app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "https://www.googletagmanager.com"],
       styleSrc: ["'self'", "'unsafe-inline'"],
       fontSrc: ["'self'"],
-      imgSrc: ["'self'", "data:"],
-      connectSrc: ["'self'"],
+      imgSrc: ["'self'", "data:", "https://www.google-analytics.com"],
+      connectSrc: ["'self'", "https://www.google-analytics.com", "https://analytics.google.com"],
       frameAncestors: ["'none'"],
       formAction: ["'self'"],
       baseUri: ["'self'"],
@@ -100,6 +103,7 @@ app.use('/api/countries', apiLimiter, publicCountriesRoutes);
 app.use('/api/calculate', apiLimiter, calculatorRoutes);
 app.use('/api/vendor', apiLimiter, vendorRoutes);
 app.use('/api/faq', apiLimiter, faqRoutes);
+app.use('/api/settings/public', apiLimiter, publicSettingsRoutes);
 app.use('/api/enquiry', enquiryLimiter, enquiryRoutes);
 
 // Auth routes
@@ -112,6 +116,8 @@ app.use('/api/admin/settings', settingsRoutes);
 app.use('/api/admin/users', usersRoutes);
 app.use('/api/admin/vendors', vendorsAdminRoutes);
 app.use('/api/admin/enquiries', enquiriesAdminRoutes);
+app.use('/api/admin/analytics', analyticsAdminRoutes);
+app.use('/api/admin/invites', invitesAdminRoutes);
 
 // Global error handler — never leak stack traces or DB details
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
