@@ -17,6 +17,7 @@ import Enquiries from './pages/admin/Enquiries';
 import Analytics from './pages/admin/Analytics';
 import FAQEditor from './pages/admin/FAQEditor';
 import Users from './pages/admin/Users';
+import Invite from './pages/admin/Invite';
 import Settings from './pages/admin/Settings';
 
 export default function App() {
@@ -39,6 +40,7 @@ export default function App() {
       {/* Admin auth (no sidebar) */}
       <Route path="/admin/login" element={<Login />} />
       <Route path="/admin/setup" element={<Setup />} />
+      <Route path="/admin/invite/:token" element={<Invite />} />
 
       {/* Admin panel (with sidebar) */}
       <Route path="/admin" element={<AdminLayout />}>

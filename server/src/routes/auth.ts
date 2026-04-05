@@ -22,6 +22,103 @@ const origin = process.env.WEBAUTHN_ORIGIN || 'http://localhost:5177';
 // In-memory challenge store (per-session, short-lived)
 const challengeStore = new Map<string, { challenge: string; userId?: string; username?: string }>();
 
+// Validate invite token (public — no auth needed)
+router.get('/invite/:token', async (req: Request, res: Response) => {
+  try {
+    const tokenHash = crypto.createHash('sha256').update(req.params.token).digest('hex');
+    const result = await query(
+      `SELECT id, display_name, expires_at FROM invite_tokens
+       WHERE token_hash = $1 AND used_at IS NULL AND expires_at > NOW()`,
+      [tokenHash]
+    );
+    if (result.rows.length === 0) {
+      res.status(404).json({ error: 'Invalid or expired invite' });
+      return;
+    }
+    res.json({ valid: true, displayName: result.rows[0].display_name });
+  } catch {
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// Register via invite token (public — token acts as auth)
+router.post('/register-with-invite', async (req: Request, res: Response) => {
+  const { token: inviteToken, username, displayName } = req.body;
+
+  if (!inviteToken || !username) {
+    res.status(400).json({ error: 'Token and username are required' });
+    return;
+  }
+
+  try {
+    const tokenHash = crypto.createHash('sha256').update(inviteToken).digest('hex');
+    const inviteResult = await query(
+      `SELECT id FROM invite_tokens
+       WHERE token_hash = $1 AND used_at IS NULL AND expires_at > NOW()`,
+      [tokenHash]
+    );
+
+    if (inviteResult.rows.length === 0) {
+      res.status(401).json({ error: 'Invalid or expired invite' });
+      return;
+    }
+
+    // Check username not taken
+    const existing = await query(
+      'SELECT id FROM admin_users WHERE username = $1 AND credential_id IS NOT NULL',
+      [username.trim()]
+    );
+    if (existing.rows.length > 0) {
+      res.status(409).json({ error: 'Username already exists' });
+      return;
+    }
+
+    // Clean up orphaned records
+    await query(
+      'DELETE FROM admin_users WHERE username = $1 AND credential_id IS NULL',
+      [username.trim()]
+    );
+
+    // Create user
+    const userResult = await query(
+      'INSERT INTO admin_users (username, display_name) VALUES ($1, $2) RETURNING id',
+      [username.trim(), (displayName || username).trim()]
+    );
+    const userId = userResult.rows[0].id;
+
+    const options = await generateRegistrationOptions({
+      rpName,
+      rpID,
+      userID: userId,
+      userName: username.trim(),
+      userDisplayName: (displayName || username).trim(),
+      attestationType: 'none',
+      authenticatorSelection: {
+        residentKey: 'preferred',
+        userVerification: 'preferred',
+      },
+    });
+
+    const challengeId = crypto.randomUUID();
+    challengeStore.set(challengeId, {
+      challenge: options.challenge,
+      userId,
+      username: username.trim(),
+    });
+    setTimeout(() => challengeStore.delete(challengeId), 5 * 60 * 1000);
+
+    // Mark invite as used
+    await query(
+      'UPDATE invite_tokens SET used_at = NOW() WHERE token_hash = $1',
+      [tokenHash]
+    );
+
+    res.json({ options, challengeId });
+  } catch {
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 // Check if setup is needed (no admin users exist)
 router.get('/setup-status', async (_req: Request, res: Response) => {
   try {

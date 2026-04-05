@@ -12,9 +12,6 @@ services:
       - uploads:/app/uploads
     environment:
       NODE_ENV: development
-      CORS_ORIGINS: http://localhost:5177,http://localhost:8082
-      WEBAUTHN_RP_ID: localhost
-      WEBAUTHN_ORIGIN: http://localhost:8082
     command: npx tsx watch src/index.ts
 
   client:

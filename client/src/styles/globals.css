@@ -1141,6 +1141,24 @@ label {
   color: var(--color-heading);
 }
 
+/* === Invite URL Box === */
+.invite-url-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: var(--color-bg-section);
+  border: 1px solid var(--color-green);
+  border-radius: var(--radius);
+}
+
+.invite-url-box input {
+  flex: 1;
+  font-size: 0.8rem;
+  font-family: 'SF Mono', 'Consolas', monospace;
+  background: var(--color-bg);
+}
+
 /* === Analytics Chart === */
 .daily-chart {
   display: flex;

@@ -114,6 +114,7 @@ export default function CalculatorForm({ vendorSlug, equipmentTypes, preloadedCo
         amount: parseFloat(amount),
         termMonths: parseInt(termMonths, 10),
         ...(depositMonths !== '' ? { depositMonths: parseInt(depositMonths, 10) } : {}),
+        ...(vendorSlug ? { vendorSlug } : {}),
       });
       setResult(data);
     } catch (err: unknown) {

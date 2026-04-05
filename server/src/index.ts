@@ -20,6 +20,7 @@ import usersRoutes from './routes/admin/users';
 import vendorsAdminRoutes from './routes/admin/vendors';
 import enquiriesAdminRoutes from './routes/admin/enquiries';
 import analyticsAdminRoutes from './routes/admin/analytics';
+import invitesAdminRoutes from './routes/admin/invites';
 
 const app = express();
 const PORT = parseInt(process.env.PORT || '3000', 10);
@@ -116,6 +117,7 @@ app.use('/api/admin/users', usersRoutes);
 app.use('/api/admin/vendors', vendorsAdminRoutes);
 app.use('/api/admin/enquiries', enquiriesAdminRoutes);
 app.use('/api/admin/analytics', analyticsAdminRoutes);
+app.use('/api/admin/invites', invitesAdminRoutes);
 
 // Global error handler — never leak stack traces or DB details
 app.use((err: Error, _req: Request, res: Response, _next: NextFunction) => {
