@@ -1,0 +1,74 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: oaklease-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME:-oaklease_calc}
+      POSTGRES_USER: ${DB_USER:-oaklease}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:5435:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-oaklease}"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: oaklease-server
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME:-oaklease_calc}
+      DB_USER: ${DB_USER:-oaklease}
+      DB_PASSWORD: ${DB_PASSWORD}
+      SESSION_SECRET: ${SESSION_SECRET:?Set SESSION_SECRET in .env}
+      CORS_ORIGINS: ${CORS_ORIGINS:-https://euro.oaklease.co.uk}
+      SMTP_HOST: ${SMTP_HOST:-smtp.office365.com}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER}
+      SMTP_PASSWORD: ${SMTP_PASSWORD}
+      EMAIL_FROM: ${EMAIL_FROM:-enquiries@oaklease.co.uk}
+      WEBAUTHN_RP_NAME: ${WEBAUTHN_RP_NAME:-Oaklease Admin}
+      WEBAUTHN_RP_ID: ${WEBAUTHN_RP_ID:-euro.oaklease.co.uk}
+      WEBAUTHN_ORIGIN: ${WEBAUTHN_ORIGIN:-https://euro.oaklease.co.uk}
+    volumes:
+      - uploads:/app/uploads
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: oaklease-client
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    container_name: oaklease-nginx
+    restart: unless-stopped
+    depends_on:
+      - server
+      - client
+    ports:
+      - "8081:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - uploads:/app/uploads:ro
+
+volumes:
+  pgdata:
+  uploads:

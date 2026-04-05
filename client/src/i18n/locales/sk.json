@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Odoslať",
+    "cancel": "Zrušiť",
+    "loading": "Načítava sa...",
+    "error": "Vyskytla sa chyba",
+    "back": "Späť"
+  },
+  "nav": {
+    "calculator": "Kalkulačka",
+    "faq": "FAQ",
+    "language": "Jazyk"
+  },
+  "hero": {
+    "title": "Európska kalkulačka lízingu zariadení",
+    "subtitle": "Odhadnite náklady na lízing zariadení v celej Európe. Okamžite získajte orientačné mesačné a štvrťročné splátky."
+  },
+  "calculator": {
+    "country": "Krajina",
+    "selectCountry": "Vyberte krajinu",
+    "equipmentValue": "Hodnota zariadenia",
+    "equipmentType": "Typ zariadenia",
+    "selectType": "Vyberte typ",
+    "leaseTerm": "Doba lízingu",
+    "selectTerm": "Vyberte dobu",
+    "months": "mesiacov",
+    "year": "rok",
+    "years": "roky",
+    "advancePayments": "Zálohy (mesiace)",
+    "default": "Predvolené",
+    "calculate": "Vypočítať",
+    "calculating": "Prebieha výpočet...",
+    "loadingCountries": "Načítavajú sa krajiny..."
+  },
+  "results": {
+    "title": "Odhadované náklady na lízing",
+    "monthlyPayment": "Mesačná splátka",
+    "quarterlyPayment": "Štvrťročná splátka",
+    "exclVat": "bez DPH",
+    "inclVat": "s DPH",
+    "breakdown": "Rozpis",
+    "equipmentValue": "Hodnota zariadenia",
+    "deposit": "Záloha / Akontácia",
+    "amountFinanced": "Financovaná suma",
+    "monthlyVat": "Mesačné DPH",
+    "totalExclVat": "Celkové náklady na lízing (bez DPH)",
+    "totalInclVat": "Celkové náklady na lízing (s DPH)",
+    "disclaimer": "Tieto sumy sú len orientačné odhady. Skutočné podmienky lízingu sa môžu líšiť v závislosti od posúdenia bonity, typu zariadenia a ďalších faktorov. Vyžiadajte si formálnu ponuku pre presnú kalkuláciu."
+  },
+  "enquiry": {
+    "title": "Vyžiadať si ponuku",
+    "subtitle": "Zaujali vás tieto sumy? Zašlite nám svoje údaje a my vám poskytneme formálnu ponuku.",
+    "name": "Vaše meno",
+    "company": "Názov spoločnosti",
+    "email": "E-mail",
+    "phone": "Telefón (nepovinné)",
+    "message": "Správa (nepovinné)",
+    "consent": "Súhlasím so spracovaním mojich osobných údajov spoločnosťou Oaklease Ltd za účelom odpovede na tento dotaz.",
+    "privacyPolicy": "Zásady ochrany osobných údajov",
+    "submit": "Vyžiadať si ponuku",
+    "submitting": "Odosiela sa...",
+    "successTitle": "Ďakujeme!",
+    "successMessage": "Vaša žiadosť o ponuku bola odoslaná. Náš tím vás bude kontaktovať do 1–2 pracovných dní.",
+    "consentRequired": "Na odoslanie dotazu musíte súhlasiť so spracovaním údajov."
+  },
+  "faq": {
+    "title": "Často kladené otázky",
+    "intro": "Všetko, čo potrebujete vedieť o lízingu zariadení v Európe."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — Európske riešenia lízingu zariadení",
+    "privacy": "Zásady ochrany osobných údajov",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Stránka, ktorú hľadáte, neexistuje.",
+    "back": "Späť na kalkulačku"
+  },
+  "embed": {
+    "poweredBy": "Prevádzkuje"
+  }
+}

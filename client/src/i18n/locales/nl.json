@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Verzenden",
+    "cancel": "Annuleren",
+    "loading": "Laden...",
+    "error": "Er is een fout opgetreden",
+    "back": "Terug"
+  },
+  "nav": {
+    "calculator": "Calculator",
+    "faq": "FAQ",
+    "language": "Taal"
+  },
+  "hero": {
+    "title": "Europese leasecalculator voor apparatuur",
+    "subtitle": "Bereken de leasekosten voor apparatuur in heel Europa. Ontvang direct indicatieve maandelijkse en driemaandelijkse betalingen."
+  },
+  "calculator": {
+    "country": "Land",
+    "selectCountry": "Selecteer een land",
+    "equipmentValue": "Waarde van de apparatuur",
+    "equipmentType": "Type apparatuur",
+    "selectType": "Selecteer type",
+    "leaseTerm": "Looptijd",
+    "selectTerm": "Selecteer looptijd",
+    "months": "maanden",
+    "year": "jaar",
+    "years": "jaar",
+    "advancePayments": "Vooruitbetalingen (maanden)",
+    "default": "Standaard",
+    "calculate": "Berekenen",
+    "calculating": "Berekenen...",
+    "loadingCountries": "Landen laden..."
+  },
+  "results": {
+    "title": "Geschatte leasekosten",
+    "monthlyPayment": "Maandelijkse betaling",
+    "quarterlyPayment": "Driemaandelijkse betaling",
+    "exclVat": "excl. btw",
+    "inclVat": "incl. btw",
+    "breakdown": "Specificatie",
+    "equipmentValue": "Waarde van de apparatuur",
+    "deposit": "Aanbetaling / Vooruitbetaling",
+    "amountFinanced": "Gefinancierd bedrag",
+    "monthlyVat": "Maandelijkse btw",
+    "totalExclVat": "Totale leasekosten (excl. btw)",
+    "totalInclVat": "Totale leasekosten (incl. btw)",
+    "disclaimer": "Deze cijfers zijn uitsluitend indicatieve schattingen. De werkelijke leasevoorwaarden kunnen variëren op basis van kredietbeoordeling, type apparatuur en andere factoren. Vraag een formele offerte aan voor nauwkeurige prijzen."
+  },
+  "enquiry": {
+    "title": "Offerte aanvragen",
+    "subtitle": "Geïnteresseerd in deze cijfers? Stuur ons uw gegevens en wij bezorgen u een formele offerte.",
+    "name": "Uw naam",
+    "company": "Bedrijfsnaam",
+    "email": "E-mail",
+    "phone": "Telefoon (optioneel)",
+    "message": "Bericht (optioneel)",
+    "consent": "Ik geef Oaklease Ltd toestemming om mijn persoonsgegevens te verwerken om op deze aanvraag te reageren.",
+    "privacyPolicy": "Privacybeleid",
+    "submit": "Offerte aanvragen",
+    "submitting": "Verzenden...",
+    "successTitle": "Bedankt!",
+    "successMessage": "Uw offerteaanvraag is verzonden. Ons team neemt binnen 1-2 werkdagen contact met u op.",
+    "consentRequired": "U moet toestemming geven voor gegevensverwerking om een aanvraag in te dienen."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "intro": "Alles wat u moet weten over het leasen van apparatuur in Europa."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — Europese leaseoplossingen voor apparatuur",
+    "privacy": "Privacybeleid",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "De pagina die u zoekt bestaat niet.",
+    "back": "Terug naar de calculator"
+  },
+  "embed": {
+    "poweredBy": "Mogelijk gemaakt door"
+  }
+}

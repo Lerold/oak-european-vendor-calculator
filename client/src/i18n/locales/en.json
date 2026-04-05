@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "back": "Back"
+  },
+  "nav": {
+    "calculator": "Calculator",
+    "faq": "FAQ",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "European Equipment Leasing Calculator",
+    "subtitle": "Estimate leasing costs for equipment across Europe. Get indicative monthly and quarterly payments instantly."
+  },
+  "calculator": {
+    "country": "Country",
+    "selectCountry": "Select a country",
+    "equipmentValue": "Equipment Value",
+    "equipmentType": "Equipment Type",
+    "selectType": "Select type",
+    "leaseTerm": "Lease Term",
+    "selectTerm": "Select term",
+    "months": "months",
+    "year": "year",
+    "years": "years",
+    "advancePayments": "Advance Payments (months)",
+    "default": "Default",
+    "calculate": "Calculate",
+    "calculating": "Calculating...",
+    "loadingCountries": "Loading countries..."
+  },
+  "results": {
+    "title": "Estimated Leasing Costs",
+    "monthlyPayment": "Monthly Payment",
+    "quarterlyPayment": "Quarterly Payment",
+    "exclVat": "excl. VAT",
+    "inclVat": "incl. VAT",
+    "breakdown": "Breakdown",
+    "equipmentValue": "Equipment Value",
+    "deposit": "Deposit / Advance",
+    "amountFinanced": "Amount Financed",
+    "monthlyVat": "Monthly VAT",
+    "totalExclVat": "Total Lease Cost (excl. VAT)",
+    "totalInclVat": "Total Lease Cost (incl. VAT)",
+    "disclaimer": "These figures are indicative estimates only. Actual leasing terms may vary based on credit assessment, equipment type, and other factors. Request a formal quote for accurate pricing."
+  },
+  "enquiry": {
+    "title": "Request a Quote",
+    "subtitle": "Interested in these figures? Submit your details and we'll provide a formal quotation.",
+    "name": "Your Name",
+    "company": "Company Name",
+    "email": "Email",
+    "phone": "Phone (optional)",
+    "message": "Message (optional)",
+    "consent": "I consent to Oaklease Ltd processing my personal data to respond to this enquiry.",
+    "privacyPolicy": "Privacy Policy",
+    "submit": "Request a Quote",
+    "submitting": "Submitting...",
+    "successTitle": "Thank You!",
+    "successMessage": "Your quote request has been submitted. Our team will be in touch within 1-2 business days.",
+    "consentRequired": "You must consent to data processing to submit an enquiry."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "intro": "Everything you need to know about equipment leasing across Europe."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — European Equipment Leasing Solutions",
+    "privacy": "Privacy Policy",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "The page you're looking for doesn't exist.",
+    "back": "Back to Calculator"
+  },
+  "embed": {
+    "poweredBy": "Powered by"
+  }
+}

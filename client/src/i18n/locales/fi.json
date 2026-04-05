@@ -1,0 +1,83 @@
+{
+  "common": {
+    "submit": "Lähetä",
+    "cancel": "Peruuta",
+    "loading": "Ladataan...",
+    "error": "Tapahtui virhe",
+    "back": "Takaisin"
+  },
+  "nav": {
+    "calculator": "Laskuri",
+    "faq": "UKK",
+    "language": "Kieli"
+  },
+  "hero": {
+    "title": "Eurooppalainen laiteleasing-laskuri",
+    "subtitle": "Arvioi laitteiden leasingkustannukset kaikkialla Euroopassa. Saat ohjeelliset kuukausi- ja neljännesvuosimaksut välittömästi."
+  },
+  "calculator": {
+    "country": "Maa",
+    "selectCountry": "Valitse maa",
+    "equipmentValue": "Laitteen arvo",
+    "equipmentType": "Laitetyyppi",
+    "selectType": "Valitse tyyppi",
+    "leaseTerm": "Leasingkausi",
+    "selectTerm": "Valitse kausi",
+    "months": "kuukautta",
+    "year": "vuosi",
+    "years": "vuotta",
+    "advancePayments": "Ennakkomaksut (kuukautta)",
+    "default": "Oletus",
+    "calculate": "Laske",
+    "calculating": "Lasketaan...",
+    "loadingCountries": "Ladataan maita..."
+  },
+  "results": {
+    "title": "Arvioidut leasingkustannukset",
+    "monthlyPayment": "Kuukausimaksu",
+    "quarterlyPayment": "Neljännesvuosimaksu",
+    "exclVat": "alv 0 %",
+    "inclVat": "sis. alv",
+    "breakdown": "Erittely",
+    "equipmentValue": "Laitteen arvo",
+    "deposit": "Vakuusmaksu / Ennakko",
+    "amountFinanced": "Rahoitettava summa",
+    "monthlyVat": "Kuukausittainen alv",
+    "totalExclVat": "Leasingkustannukset yhteensä (alv 0 %)",
+    "totalInclVat": "Leasingkustannukset yhteensä (sis. alv)",
+    "disclaimer": "Nämä luvut ovat vain ohjeellisia arvioita. Todelliset leasingehdot voivat vaihdella luottoarvioinnin, laitetyypin ja muiden tekijöiden perusteella. Pyydä virallinen tarjous tarkkaa hinnoittelua varten."
+  },
+  "enquiry": {
+    "title": "Pyydä tarjous",
+    "subtitle": "Kiinnostavatko nämä luvut? Lähetä tietosi, niin toimitamme virallisen tarjouksen.",
+    "name": "Nimesi",
+    "company": "Yrityksen nimi",
+    "email": "Sähköposti",
+    "phone": "Puhelin (valinnainen)",
+    "message": "Viesti (valinnainen)",
+    "consent": "Suostun siihen, että Oaklease Ltd käsittelee henkilötietojani vastatakseen tähän kyselyyn.",
+    "privacyPolicy": "Tietosuojakäytäntö",
+    "submit": "Pyydä tarjous",
+    "submitting": "Lähetetään...",
+    "successTitle": "Kiitos!",
+    "successMessage": "Tarjouspyyntösi on lähetetty. Tiimimme ottaa yhteyttä 1–2 arkipäivän kuluessa.",
+    "consentRequired": "Sinun on annettava suostumus tietojen käsittelyyn lähettääksesi kyselyn."
+  },
+  "faq": {
+    "title": "Usein kysytyt kysymykset",
+    "intro": "Kaikki mitä sinun tarvitsee tietää laiteleasingista Euroopassa."
+  },
+  "footer": {
+    "tagline": "Oaklease Ltd — Eurooppalaiset laiteleasingratkaisut",
+    "privacy": "Tietosuojakäytäntö",
+    "copyright": "© Oaklease Ltd 2026"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Etsimääsi sivua ei löydy.",
+    "back": "Takaisin laskuriin"
+  },
+  "embed": {
+    "poweredBy": "Palvelun tarjoaa"
+  }
+}
