@@ -628,6 +628,13 @@ label {
   margin-top: auto;
 }
 
+.admin-version {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+
 .admin-main {
   flex: 1;
   background: var(--color-bg-section);
