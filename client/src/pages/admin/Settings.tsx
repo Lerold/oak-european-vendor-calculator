@@ -46,6 +46,7 @@ export default function Settings() {
     { key: 'data_retention_days', label: 'Data Retention (days)', placeholder: '730' },
     { key: 'default_min_amount', label: 'Default Min Amount', placeholder: '3000' },
     { key: 'default_max_amount', label: 'Default Max Amount', placeholder: '15000000' },
+    { key: 'google_analytics_id', label: 'Google Analytics ID (leave empty to disable)', placeholder: 'G-XXXXXXXXXX' },
   ];
 
   return (

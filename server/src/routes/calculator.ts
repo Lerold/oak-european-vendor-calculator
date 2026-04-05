@@ -10,6 +10,7 @@ const calculateSchema = z.object({
   amount: z.number().positive(),
   termMonths: z.number().int().positive(),
   depositMonths: z.number().int().min(0).optional(),
+  vendorSlug: z.string().max(100).optional(),
 });
 
 // POST /api/calculate
@@ -81,6 +82,12 @@ router.post('/', async (req: Request, res: Response) => {
       depositMonths: country.deposit_enabled ? effectiveDepositMonths : 0,
       depositEnabled: country.deposit_enabled,
     });
+
+    // Log calculation anonymously (no PII — GDPR compliant)
+    query(
+      'INSERT INTO calculation_logs (country_code, vendor_slug, term_months) VALUES ($1, $2, $3)',
+      [countryCode.toUpperCase(), req.body.vendorSlug || null, termMonths]
+    ).catch(() => { /* non-critical — don't fail the request */ });
 
     // Return results WITHOUT the interest rate
     res.json({

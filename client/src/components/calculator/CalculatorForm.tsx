@@ -74,7 +74,14 @@ export default function CalculatorForm({ vendorSlug, equipmentTypes, preloadedCo
     // For vendor mode, fetch from vendor endpoint; otherwise public countries
     const url = vendorSlug ? `/vendor/${vendorSlug}` : '/countries';
     api.get(url).then(({ data }) => {
-      setCountries(vendorSlug ? data.countries : data.countries);
+      const c = data.countries;
+      setCountries(c);
+      // Auto-select if only one country or default is set
+      if (defaultCountry) {
+        setSelectedCode(defaultCountry);
+      } else if (c.length === 1) {
+        setSelectedCode(c[0].code);
+      }
       setLoadingCountries(false);
     }).catch(() => {
       setError('Failed to load countries');
@@ -121,6 +128,14 @@ export default function CalculatorForm({ vendorSlug, equipmentTypes, preloadedCo
     }
   };
 
+  const sliderStep = (min: number, max: number): number => {
+    const range = max - min;
+    if (range <= 10000) return 500;
+    if (range <= 50000) return 1000;
+    if (range <= 200000) return 5000;
+    return 10000;
+  };
+
   const formatRange = (min: number, max: number, currency: string) => {
     const fmt = new Intl.NumberFormat('en-GB', { style: 'currency', currency, maximumFractionDigits: 0 });
     return `${fmt.format(min)} – ${fmt.format(max)}`;
@@ -157,7 +172,22 @@ export default function CalculatorForm({ vendorSlug, equipmentTypes, preloadedCo
             <div className="form-group">
               <label htmlFor="amount">
                 Equipment Value ({selectedCountry.currency_code})
+                {amount && (
+                  <span className="amount-display">
+                    {' '}{new Intl.NumberFormat('en-GB', { style: 'currency', currency: selectedCountry.currency_code, maximumFractionDigits: 0 }).format(Number(amount))}
+                  </span>
+                )}
               </label>
+              <input
+                id="amount-slider"
+                type="range"
+                min={selectedCountry.min_amount}
+                max={Math.min(Number(selectedCountry.max_amount), 500000)}
+                step={sliderStep(Number(selectedCountry.min_amount), Math.min(Number(selectedCountry.max_amount), 500000))}
+                value={amount || selectedCountry.min_amount}
+                onChange={(e) => { setAmount(e.target.value); setResult(null); }}
+                className="amount-slider"
+              />
               <input
                 id="amount"
                 type="number"

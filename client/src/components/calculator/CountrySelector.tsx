@@ -22,6 +22,18 @@ export default function CountrySelector({ countries, value, onChange, loading }:
     );
   }
 
+  // Single country — show as text, no dropdown
+  if (countries.length === 1) {
+    return (
+      <div className="form-group">
+        <label>Country</label>
+        <div className="single-country">
+          {countries[0].flag_emoji} {countries[0].name}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="form-group">
       <label htmlFor="country">Country</label>

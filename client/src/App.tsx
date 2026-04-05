@@ -14,6 +14,8 @@ import Countries from './pages/admin/Countries';
 import Rates from './pages/admin/Rates';
 import Vendors from './pages/admin/Vendors';
 import Enquiries from './pages/admin/Enquiries';
+import Analytics from './pages/admin/Analytics';
+import FAQEditor from './pages/admin/FAQEditor';
 import Users from './pages/admin/Users';
 import Settings from './pages/admin/Settings';
 
@@ -45,6 +47,8 @@ export default function App() {
         <Route path="rates" element={<Rates />} />
         <Route path="vendors" element={<Vendors />} />
         <Route path="enquiries" element={<Enquiries />} />
+        <Route path="analytics" element={<Analytics />} />
+        <Route path="faq" element={<FAQEditor />} />
         <Route path="users" element={<Users />} />
         <Route path="settings" element={<Settings />} />
       </Route>
