@@ -18,7 +18,7 @@ export default function Footer() {
             {t('footer.privacy')}
           </a>
         </div>
-        <p className="footer-copyright">{t('footer.copyright')} &middot; v1.0.3</p>
+        <p className="footer-copyright">{t('footer.copyright')} &middot; v1.0.4</p>
       </div>
     </footer>
   );
