@@ -14,12 +14,11 @@ export default function Footer() {
           <a href="https://oaklease.co.uk" target="_blank" rel="noopener noreferrer" className="footer-link">
             oaklease.co.uk
           </a>
-          <a href="/faq" className="footer-link">{t('nav.faq')}</a>
           <a href="https://oaklease.co.uk/privacy-policy" target="_blank" rel="noopener noreferrer" className="footer-link">
             {t('footer.privacy')}
           </a>
         </div>
-        <p className="footer-copyright">{t('footer.copyright')} &middot; v1.0.2</p>
+        <p className="footer-copyright">{t('footer.copyright')} &middot; v1.0.3</p>
       </div>
     </footer>
   );
