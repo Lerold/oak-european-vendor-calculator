@@ -68,7 +68,7 @@ export default function AdminLayout() {
           <LogOut size={18} />
           <span>Logout</span>
         </button>
-        <div className="admin-version">v1.0.3</div>
+        <div className="admin-version">v1.0.4</div>
       </aside>
       <div className="admin-main">
         <Outlet />
